@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/hqei-server
+    username: root
+    password:
+
+liquibase:
+  change-log: classpath:config/liquibase/server/master.xml
+  enabled: true
+  drop-first: false
