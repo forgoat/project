@@ -9,5 +9,9 @@
     </preConditions>
 
     <include file="classpath:config/liquibase/server/change_log/rel0/user.xml"/>
+    <include file="classpath:config/liquibase/server/change_log/rel0/sys_permission.xml"/>
+    <include file="classpath:config/liquibase/server/change_log/rel0/sys_user.xml"/>
+    <include file="classpath:config/liquibase/server/change_log/rel0/sys_role.xml"/>
+    <include file="classpath:config/liquibase/server/change_log/rel0/sys_role_permission.xml"/>
 
 </databaseChangeLog>

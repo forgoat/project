@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="hjm">
+        <createTable tableName="sys_permission" remarks="权限表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="menu_code" type="varchar(255)" remarks="归属菜单,前端判断并展示菜单使用" />
+            <column name="menu_name" type="varchar(255)" remarks="菜单的中文释义" />
+            <column name="permission_code" type="varchar(255)" remarks="权限的代码/通配符" />
+            <column name="permission_name" type="varchar(255)" remarks="本权限的中文释义" />
+            <column name="required_permission" type="tinyint(1)" defaultValue="2" remarks="是否本菜单必选权限, 1.必选 2非必选 通常是'列表'权限是必选" />
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

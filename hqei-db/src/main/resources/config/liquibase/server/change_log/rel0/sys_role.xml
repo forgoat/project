@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="hjm">
+        <createTable tableName="sys_role" remarks="角色表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="role_name" type="varchar(32)" remarks="角色名" />
+            <column name="create_time" type="bigint" />
+            <column name="update_time" type="bigint" />
+            <column name="status" type="int" remarks="是否有效 1有效，2无效" />
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
