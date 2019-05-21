@@ -1,6 +1,5 @@
 package com.hqei.server.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.hqei.common.BaseResponse;
 import com.hqei.common.enums.BaseCodeEnum;
 import com.hqei.server.Constants;
@@ -57,10 +56,8 @@ public class LoginController extends SysController{
 		Session session = SecurityUtils.getSubject().getSession();
 		SysUserDo userInfo = (SysUserDo) session.getAttribute(Constants.SESSION_USER_INFO);
 		String username = userInfo.getUsername();
-		JSONObject info = new JSONObject();
 		UserPermissionInfoVo userPermission = sysPermissionService.getUserPermission(username);
 		session.setAttribute(Constants.SESSION_USER_PERMISSION, userPermission);
-		info.put("userPermission", userPermission);
 		return new BaseResponse<>(BaseCodeEnum.SUCCESS, userPermission);
 	}
 

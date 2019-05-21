@@ -21,7 +21,7 @@
     delete from sys_role
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.hqei.server.domain.SysRoleDo" >
+  <insert id="insert" parameterType="com.hqei.server.domain.SysRoleDo" useGeneratedKeys="true" keyProperty="id">
     insert into sys_role (id, role_name, create_time, 
       update_time, status)
     values (#{id,jdbcType=BIGINT}, #{roleName,jdbcType=VARCHAR}, #{createTime,jdbcType=BIGINT}, 

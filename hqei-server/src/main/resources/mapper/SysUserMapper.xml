@@ -174,12 +174,11 @@
     ORDER BY u.userId
   </select>
 
-  <select id="getAllRoles" resultType="com.alibaba.fastjson.JSONObject">
+  <select id="getAllRoles" resultMap="BaseResultMap">
     SELECT
-    id        roleId,
-    role_name roleName
+      <include refid="Base_Column_List" />
     FROM sys_role
-    WHERE status=1
+    WHERE status = 1
   </select>
 
   <update id="updateUser" parameterType="com.hqei.server.request.ModifyUserReq">
@@ -193,63 +192,57 @@
     , status = #{status}
     WHERE id = #{userId} and id != 10001
   </update>
-  <!--<resultMap id="roleMap" type="com.heeexy.example.util.model.One2Many">-->
-    <!--<id column="roleId" property="roleId"/>-->
-    <!--<result column="roleName" property="roleName"/>-->
-    <!--<collection property="users" ofType="com.alibaba.fastjson.JSONObject">-->
-      <!--<id column="userId" property="userId"/>-->
-      <!--<result column="nickname" property="nickname"/>-->
-    <!--</collection>-->
-    <!--<collection property="menus" ofType="com.heeexy.example.util.model.One2Many">-->
-      <!--<id column="menuCode" property="menuCode"/>-->
-      <!--<result column="menuName" property="menuName"/>-->
-      <!--<collection property="permissions" ofType="com.alibaba.fastjson.JSONObject">-->
-        <!--<id column="permissionId" property="permissionId"/>-->
-        <!--<result column="permissionName" property="permissionName"/>-->
-      <!--</collection>-->
-    <!--</collection>-->
-  <!--</resultMap>-->
-  <!--<select id="listRole" resultMap="roleMap">-->
-    <!--SELECT-->
-    <!--r.id              roleId,-->
-    <!--r.role_name       roleName,-->
-    <!--u.id              userId,-->
-    <!--u.nickname        nickname,-->
-    <!--p.id              permissionId,-->
-    <!--p.menu_code       menuCode,-->
-    <!--p.menu_name       menuName,-->
-    <!--p.permission_name permissionName-->
-    <!--FROM sys_role r-->
-    <!--LEFT JOIN sys_user u ON r.id = u.role_id AND u.status =1-->
-    <!--LEFT JOIN sys_role_permission rp ON r.id = rp.role_id AND rp.status = 1-->
-    <!--LEFT JOIN sys_permission p ON rp.permission_id = p.id-->
-    <!--WHERE r.status = 1-->
-    <!--ORDER BY r.id, p.id-->
-  <!--</select>-->
-  <!--<resultMap id="permissionMap" type="com.heeexy.example.util.model.One2Many">-->
-    <!--<id column="menuName" property="menuName"/>-->
-    <!--<collection property="permissions" ofType="com.alibaba.fastjson.JSONObject">-->
-      <!--<id column="id" property="id"/>-->
-      <!--<result column="permissionName" property="permissionName"/>-->
-      <!--<result column="requiredPerm" property="requiredPerm" javaType="Integer"/>-->
-    <!--</collection>-->
-  <!--</resultMap>-->
-  <!--<select id="listAllPermission" resultMap="permissionMap">-->
-    <!--SELECT-->
-    <!--p.id                  id,-->
-    <!--p.menu_name           menuName,-->
-    <!--p.permission_name     permissionName,-->
-    <!--p.required_permission requiredPerm-->
-    <!--FROM sys_permission p;-->
-  <!--</select>-->
+  <resultMap id="roleMap" type="com.hqei.server.vo.SysRoleVo">
+    <id column="roleId" property="roleId"/>
+    <result column="roleName" property="roleName"/>
+    <collection property="users" ofType="com.hqei.server.vo.SimpleUserVo">
+      <id column="userId" property="userId"/>
+      <result column="nickname" property="nickname"/>
+    </collection>
+    <collection property="menus" ofType="com.hqei.server.vo.SimpleMenuVo">
+      <id column="menuCode" property="menuCode"/>
+      <result column="menuName" property="menuName"/>
+      <collection property="permissions" ofType="com.hqei.server.vo.SimplePermissionVo">
+        <id column="permissionId" property="permissionId"/>
+        <result column="permissionName" property="permissionName"/>
+      </collection>
+    </collection>
+  </resultMap>
+  <select id="listRole" resultMap="roleMap">
+    SELECT
+    r.id              roleId,
+    r.role_name       roleName,
+    u.id              userId,
+    u.nickname        nickname,
+    p.id              permissionId,
+    p.menu_code       menuCode,
+    p.menu_name       menuName,
+    p.permission_name permissionName
+    FROM sys_role r
+    LEFT JOIN sys_user u ON r.id = u.role_id AND u.status =1
+    LEFT JOIN sys_role_permission rp ON r.id = rp.role_id AND rp.status = 1
+    LEFT JOIN sys_permission p ON rp.permission_id = p.id
+    WHERE r.status = 1
+    ORDER BY r.id, p.id
+  </select>
+  <resultMap id="permissionMap" type="com.hqei.server.vo.SysPermissionVo">
+    <id column="menuName" property="menuName"/>
+    <collection property="permissions" ofType="com.hqei.server.domain.SysPermissionDo">
+      <id column="id" property="id"/>
+      <result column="permissionName" property="permissionName"/>
+      <result column="requiredPerm" property="requiredPermission" javaType="Integer"/>
+    </collection>
+  </resultMap>
+  <select id="listAllPermission" resultMap="permissionMap">
+    SELECT
+    p.id                  id,
+    p.menu_name           menuName,
+    p.permission_name     permissionName,
+    p.required_permission requiredPerm
+    FROM sys_permission p;
+  </select>
 
-  <insert id="insertRole" useGeneratedKeys="true" keyProperty="roleId">
-    INSERT INTO sys_role
-    (role_name)
-    VALUES (#{roleName})
-  </insert>
-
-  <insert id="insertRolePermission">
+  <insert id="insertRolePermission" useGeneratedKeys="true" keyProperty="id">
     insert into sys_role_permission (role_id, permission_id)
     values
     <foreach collection="permissions" item="item" index="index" separator=",">
@@ -257,28 +250,28 @@
     </foreach>
   </insert>
 
-  <!--<resultMap id="aRole" type="com.heeexy.example.util.model.One2Many">-->
-    <!--<id column="roleId" property="roleId"/>-->
-    <!--<result column="roleName" property="roleName"/>-->
-    <!--<collection property="users" ofType="com.alibaba.fastjson.JSONObject">-->
-      <!--<id column="userId" property="userId"/>-->
-    <!--</collection>-->
-    <!--<collection property="permissionIds" ofType="Integer">-->
-      <!--<id column="permissionId" property="permissionId"/>-->
-    <!--</collection>-->
-  <!--</resultMap>-->
-  <!--<select id="getRoleAllInfo" resultMap="aRole">-->
-    <!--SELECT-->
-    <!--r.id        roleId,-->
-    <!--r.role_name roleName,-->
-    <!--u.id        userId,-->
-    <!--p.id        permissionId-->
-    <!--FROM sys_role r-->
-    <!--LEFT JOIN sys_user u ON r.id = u.role_id AND u.status = 1-->
-    <!--LEFT JOIN sys_role_permission rp ON r.id = rp.role_id AND rp.status = 1-->
-    <!--LEFT JOIN sys_permission p ON rp.permission_id = p.id-->
-    <!--WHERE r.id = #{roleId}-->
-  <!--</select>-->
+  <resultMap id="aRole" type="com.hqei.server.vo.RoleAllInfoVo">
+    <id column="roleId" property="roleId"/>
+    <result column="roleName" property="roleName"/>
+    <collection property="users" ofType="Long">
+      <id column="userId" property="userId"/>
+    </collection>
+    <collection property="permissionIds" ofType="Long">
+      <id column="permissionId" property="permissionId"/>
+    </collection>
+  </resultMap>
+  <select id="getRoleAllInfo" resultMap="aRole">
+    SELECT
+    r.id        roleId,
+    r.role_name roleName,
+    u.id        userId,
+    p.id        permissionId
+    FROM sys_role r
+    LEFT JOIN sys_user u ON r.id = u.role_id AND u.status = 1
+    LEFT JOIN sys_role_permission rp ON r.id = rp.role_id AND rp.status = 1
+    LEFT JOIN sys_permission p ON rp.permission_id = p.id
+    WHERE r.id = #{roleId}
+  </select>
 
   <update id="removeRole">
     UPDATE sys_role

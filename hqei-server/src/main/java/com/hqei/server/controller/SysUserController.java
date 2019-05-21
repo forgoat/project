@@ -1,22 +1,23 @@
 package com.hqei.server.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.hqei.common.BaseResponse;
 import com.hqei.common.enums.BaseCodeEnum;
+import com.hqei.server.domain.SysRoleDo;
 import com.hqei.server.domain.SysUserDo;
-import com.hqei.server.domain.UserDo;
+import com.hqei.server.request.AddRoleReq;
 import com.hqei.server.request.ModifyUserReq;
 import com.hqei.server.request.PageReq;
+import com.hqei.server.request.UpdateRoleReq;
 import com.hqei.server.response.PageResp;
 import com.hqei.server.service.SysUserService;
-import com.hqei.server.service.UserService;
+import com.hqei.server.vo.SysPermissionVo;
+import com.hqei.server.vo.SysRoleVo;
 import com.hqei.server.vo.SysUserVo;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -50,8 +51,8 @@ public class SysUserController {
 
     @RequiresPermissions(value = {"user:add", "user:update"}, logical = Logical.OR)
     @GetMapping("/getAllRoles")
-    public JSONObject getAllRoles() {
-        return sysUserService.getAllRoles();
+    public BaseResponse<List<SysRoleDo>> getAllRoles() {
+        return new BaseResponse<>(BaseCodeEnum.SUCCESS, sysUserService.getAllRoles());
     }
 
     /**
@@ -59,8 +60,8 @@ public class SysUserController {
      */
     @RequiresPermissions("role:list")
     @GetMapping("/listRole")
-    public JSONObject listRole() {
-        return sysUserService.listRole();
+    public BaseResponse<List<SysRoleVo>> listRole() {
+        return new BaseResponse<>(BaseCodeEnum.SUCCESS, sysUserService.listRole());
     }
 
     /**
@@ -68,8 +69,8 @@ public class SysUserController {
      */
     @RequiresPermissions("role:list")
     @GetMapping("/listAllPermission")
-    public JSONObject listAllPermission() {
-        return sysUserService.listAllPermission();
+    public BaseResponse<List<SysPermissionVo>> listAllPermission() {
+        return new BaseResponse<>(BaseCodeEnum.SUCCESS, sysUserService.listAllPermission());
     }
 
     /**
@@ -77,10 +78,8 @@ public class SysUserController {
      */
     @RequiresPermissions("role:add")
     @PostMapping("/addRole")
-    public JSONObject addRole(@RequestBody JSONObject requestJson) {
-//        CommonUtil.hasAllRequired(requestJson, "roleName,permissions");
-//        return sysUserService.addRole(requestJson);
-        return null;
+    public BaseResponse addRole(@Valid @RequestBody AddRoleReq addRoleReq) {
+        return sysUserService.addRole(addRoleReq);
     }
 
     /**
@@ -88,10 +87,8 @@ public class SysUserController {
      */
     @RequiresPermissions("role:update")
     @PostMapping("/updateRole")
-    public JSONObject updateRole(@RequestBody JSONObject requestJson) {
-//        CommonUtil.hasAllRequired(requestJson, "roleId,roleName,permissions");
-//        return sysUserService.updateRole(requestJson);
-        return null;
+    public BaseResponse updateRole(@Valid @RequestBody UpdateRoleReq updateRoleReq) {
+        return sysUserService.updateRole(updateRoleReq);
     }
 
     /**
@@ -99,9 +96,7 @@ public class SysUserController {
      */
     @RequiresPermissions("role:delete")
     @PostMapping("/deleteRole")
-    public JSONObject deleteRole(@RequestBody JSONObject requestJson) {
-//        CommonUtil.hasAllRequired(requestJson, "roleId");
-//        return sysUserService.deleteRole(requestJson);
-        return null;
+    public BaseResponse deleteRole(@RequestBody Long roleId) {
+        return sysUserService.deleteRole(roleId);
     }
 }

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.hqei.server.Constants;
 import com.hqei.server.domain.SysUserDo;
 import com.hqei.server.service.SysUserService;
+import com.hqei.server.vo.UserPermissionInfoVo;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -14,8 +15,6 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.Collection;
 
 /**
  * @description: 自定义Realm
@@ -31,12 +30,12 @@ public class UserRealm extends AuthorizingRealm {
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
 		Session session = SecurityUtils.getSubject().getSession();
 		//查询用户的权限
-		JSONObject permission = (JSONObject) session.getAttribute(Constants.SESSION_USER_PERMISSION);
-		logger.info("permission的值为:" + permission);
-		logger.info("本用户权限为:" + permission.get("permissionList"));
+		UserPermissionInfoVo permission = (UserPermissionInfoVo) session.getAttribute(Constants.SESSION_USER_PERMISSION);
+		logger.info("permission的值为:" + JSONObject.toJSONString(permission));
+		logger.info("本用户权限为:" + JSONObject.toJSONString(permission.getPermissionList()));
 		//为当前用户设置角色和权限
 		SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
-		authorizationInfo.addStringPermissions((Collection<String>) permission.get("permissionList"));
+		authorizationInfo.addStringPermissions(permission.getPermissionList());
 		return authorizationInfo;
 	}
 
