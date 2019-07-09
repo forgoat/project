@@ -1,5 +1,6 @@
 package com.hqei.server.config.shiro;
 
+import com.alibaba.fastjson.JSONObject;
 import com.hqei.common.BaseResponse;
 import com.hqei.server.enums.ErrorEnum;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
@@ -19,15 +20,15 @@ public class AjaxPermissionsAuthorizationFilter extends FormAuthenticationFilter
 	@Override
 	protected boolean onAccessDenied(ServletRequest request, ServletResponse response) {
 		BaseResponse baseResponse = new BaseResponse();
-		baseResponse.setCode(ErrorEnum.E_20011.getErrorCode());
-		baseResponse.setMsg(ErrorEnum.E_20011.getErrorMsg());
+		baseResponse.setCode(ErrorEnum.E_20011.getCode());
+		baseResponse.setMsg(ErrorEnum.E_20011.getMsg());
 		PrintWriter out = null;
 		HttpServletResponse res = (HttpServletResponse) response;
 		try {
 			res.setCharacterEncoding("UTF-8");
 			res.setContentType("application/json");
 			out = response.getWriter();
-			out.println(baseResponse);
+			out.println(JSONObject.toJSONString(baseResponse));
 		} catch (Exception e) {
 		} finally {
 			if (null != out) {

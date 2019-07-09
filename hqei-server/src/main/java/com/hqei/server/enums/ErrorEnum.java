@@ -13,21 +13,21 @@ public enum ErrorEnum {
 	E_20011("20011", "登陆已过期,请重新登陆"),
 	E_90003("90003", "缺少必填参数");
 
-	private String errorCode;
+	private String code;
 
-	private String errorMsg;
+	private String msg;
 
-	ErrorEnum(String errorCode, String errorMsg) {
-		this.errorCode = errorCode;
-		this.errorMsg = errorMsg;
+	ErrorEnum(String code, String msg) {
+		this.code = code;
+		this.msg = msg;
 	}
 
-	public String getErrorCode() {
-		return errorCode;
+	public String getCode() {
+		return code;
 	}
 
-	public String getErrorMsg() {
-		return errorMsg;
+	public String getMsg() {
+		return msg;
 	}
 
 }

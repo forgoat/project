@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="zhangchen">
+        <createTable tableName="organization_alias" remarks="机构别名数据表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="org_alias" type="varchar(128)"/>
+            <column name="org_standard_id" type="bigint" />
+            <column name="org_standard_name" type="varchar(128)"></column>
+            <column name="original_data_id" type="bigint" />
+            <column name="task_id" type="bigint" />
+            <column name="status" type="int" />
+            <column name="create_time" type="bigint"/>
+            <column name="create_user" type="varchar(128)"/>
+            <column name="modify_time" type="bigint"/>
+            <column name="modify_user" type="varchar(128)"/>
+            <column name="audit_result" type="int"></column>
+            <column name="audit_opinion" type="varchar(512)"></column>
+            <column name="audit_time" type="bigint"></column>
+            <column name="audit_user" type="varchar(64)"></column>
+            <column name="audit_modify" type="int"></column>
+        </createTable>
+    </changeSet>
+    <changeSet id="addColumnEnable" author="hjm">
+        <addColumn tableName="organization_alias">
+            <column name="enable" type="int" remarks="0:有效 1无效"></column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="addOrganizationStandardIdAndAilasNameUniqueIndex" author="zyx">
+        <sql>CREATE UNIQUE INDEX organizationStandardIdAndAilasNameIndex ON organization_alias(org_standard_id,org_alias); </sql>
+    </changeSet>
+</databaseChangeLog>

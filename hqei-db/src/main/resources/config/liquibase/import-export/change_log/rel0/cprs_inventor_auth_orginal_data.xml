@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="zyx">
+        <createTable tableName="cprs_inventor_auth_orginal_data" remarks="专利数据原始表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="data_type" type="int"/>
+            <column name="ti_en" type="varchar(256)"/>
+            <column name="appli_num" type="varchar(32)" />
+            <column name="patent_type" type="varchar(32)" />
+            <column name="inventor_all" type="text" />
+            <column name="inventor" type="varchar(32)" />
+            <column name="organization" type="varchar(64)" />
+            <column name="hosp" type="varchar(128)" />
+            <column name="department" type="varchar(128)" />
+            <column name="orginal_id" type="varchar(128)" />
+            <column name="sync_flag" type="int"></column>
+            <column name="create_time" type="bigint"/>
+            <column name="create_user" type="varchar(128)"/>
+            <column name="modify_time" type="bigint"/>
+            <column name="modify_user" type="varchar(128)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="addInventorAndAppliNumAndOrgUniqueIndex" author="zyx">
+        <sql>CREATE UNIQUE INDEX uniqueIndex ON cprs_inventor_auth_orginal_data(appli_num,inventor,organization); </sql>
+    </changeSet>
+</databaseChangeLog>

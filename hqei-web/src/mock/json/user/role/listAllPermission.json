@@ -1,0 +1,253 @@
+{
+    "code": "0",
+    "msg": "success!",
+    "errorMap": null,
+    "result": [
+        {
+            "menuName": "角色权限",
+            "permissions": [
+                {
+                    "id": 10000,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "列表",
+                    "requiredPermission": 1
+                },
+                {
+                    "id": 10001,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "新增",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10002,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "修改",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10003,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "删除",
+                    "requiredPermission": 2
+                }
+            ]
+        },
+        {
+            "menuName": "用户",
+            "permissions": [
+                {
+                    "id": 10004,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "列表",
+                    "requiredPermission": 1
+                },
+                {
+                    "id": 10005,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "新增",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10006,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "修改",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10007,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "删除",
+                    "requiredPermission": 2
+                }
+            ]
+        },
+        {
+            "menuName": "任务管理",
+            "permissions": [
+                {
+                    "id": 10008,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "列表",
+                    "requiredPermission": 1
+                },
+                {
+                    "id": 10009,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "新增",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10010,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "加工",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10011,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "审核",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10012,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "修改",
+                    "requiredPermission": 2
+                }
+            ]
+        },
+        {
+            "menuName": "机构管理",
+            "permissions": [
+                {
+                    "id": 10013,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "列表",
+                    "requiredPermission": 1
+                },
+                {
+                    "id": 10014,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "加工",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10015,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "审核",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10016,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "修改",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10017,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "删除",
+                    "requiredPermission": 2
+                }
+            ]
+        },
+        {
+            "menuName": "科室管理",
+            "permissions": [
+                {
+                    "id": 10018,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "列表",
+                    "requiredPermission": 1
+                },
+                {
+                    "id": 10019,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "加工",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10020,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "审核",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10021,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "修改",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10022,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "删除",
+                    "requiredPermission": 2
+                }
+            ]
+        },
+        {
+            "menuName": "数据管理",
+            "permissions": [
+                {
+                    "id": 10023,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "列表",
+                    "requiredPermission": 1
+                },
+                {
+                    "id": 10024,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "导入",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10025,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "导出",
+                    "requiredPermission": 2
+                },
+                {
+                    "id": 10026,
+                    "menuCode": null,
+                    "menuName": null,
+                    "permissionCode": null,
+                    "permissionName": "审核",
+                    "requiredPermission": 2
+                }
+            ]
+        }
+    ]
+}

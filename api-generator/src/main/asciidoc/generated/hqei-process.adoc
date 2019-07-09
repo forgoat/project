@@ -1,0 +1,450 @@
+= Hqei-data-process RESTful APIs
+
+
+[[_overview]]
+== Overview
+数据加工接口文档
+
+
+=== URI scheme
+[%hardbreaks]
+__Host__ : localhost:8004
+__BasePath__ : /hqei/process
+
+
+=== Tags
+
+* process-controller : Process Controller
+
+
+
+
+[[_paths]]
+== Resources
+
+[[_process-controller_resource]]
+=== Process-controller
+Process Controller
+
+
+[[_dobaidudeptusingpost]]
+==== doBaiduDept
+....
+POST /doBaiduDept
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**processDeptReq** +
+__required__|processDeptReq|<<_processdeptreq,ProcessDeptReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_ece508a8b11ea32c85ca79d1d458c4c7,BaseResponse«BaiduProcessResp»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_dobaidudepthomepageusingpost]]
+==== doBaiduDeptHomePage
+....
+POST /doBaiduDeptHomePage
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**processHomePageReq** +
+__required__|processHomePageReq|<<_processhomepagereq,ProcessHomePageReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_8fb96b64b187ee6bd54947c6c67e9547,BaseResponse«List«BaiduHomePageResultVo»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_dobaiduorghomepageusingpost]]
+==== doBaiduOrgHomePage
+....
+POST /doBaiduOrgHomePage
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**processHomePageReq** +
+__required__|processHomePageReq|<<_processhomepagereq,ProcessHomePageReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_8fb96b64b187ee6bd54947c6c67e9547,BaseResponse«List«BaiduHomePageResultVo»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_dobaidusitedeptusingpost]]
+==== doBaiduSiteDept
+....
+POST /doBaiduSiteDept
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**processDeptReq** +
+__required__|processDeptReq|<<_processdeptreq,ProcessDeptReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_ece508a8b11ea32c85ca79d1d458c4c7,BaseResponse«BaiduProcessResp»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_dogoogledeptusingpost]]
+==== doGoogleDept
+....
+POST /doGoogleDept
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**processDeptReq** +
+__required__|processDeptReq|<<_processdeptreq,ProcessDeptReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_75fc349df184046b0fa88ad888092641,BaseResponse«List«BaiduResultVo»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_dowanfangdeptusingpost]]
+==== doWanFangDept
+....
+POST /doWangFangDept
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**processDeptReq** +
+__required__|processDeptReq|<<_processdeptreq,ProcessDeptReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_9638edc2f0dfabf0616aee4e0d7f788a,BaseResponse«WanFangProcessResp»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+
+
+[[_definitions]]
+== Definitions
+
+[[_baiduhomepageresultvo]]
+=== BaiduHomePageResultVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**describe** +
+__optional__|string
+|**homePage** +
+__optional__|boolean
+|**lights** +
+__optional__|< string > array
+|**title** +
+__optional__|string
+|**url** +
+__optional__|string
+|===
+
+
+[[_baiduprocessresp]]
+=== BaiduProcessResp
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**recommends** +
+__optional__|< string > array
+|**results** +
+__optional__|< <<_baiduresultvo,BaiduResultVo>> > array
+|===
+
+
+[[_baiduresultvo]]
+=== BaiduResultVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**describe** +
+__optional__|string
+|**lights** +
+__optional__|< string > array
+|**title** +
+__optional__|string
+|**url** +
+__optional__|string
+|===
+
+
+[[_ece508a8b11ea32c85ca79d1d458c4c7]]
+=== BaseResponse«BaiduProcessResp»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|<<_baiduprocessresp,BaiduProcessResp>>
+|===
+
+
+[[_8fb96b64b187ee6bd54947c6c67e9547]]
+=== BaseResponse«List«BaiduHomePageResultVo»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_baiduhomepageresultvo,BaiduHomePageResultVo>> > array
+|===
+
+
+[[_75fc349df184046b0fa88ad888092641]]
+=== BaseResponse«List«BaiduResultVo»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_baiduresultvo,BaiduResultVo>> > array
+|===
+
+
+[[_9638edc2f0dfabf0616aee4e0d7f788a]]
+=== BaseResponse«WanFangProcessResp»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|<<_wanfangprocessresp,WanFangProcessResp>>
+|===
+
+
+[[_processdeptreq]]
+=== ProcessDeptReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**organization** +
+__optional__|string
+|**pageSize** +
+__optional__|integer (int32)
+|**person** +
+__optional__|string
+|===
+
+
+[[_processhomepagereq]]
+=== ProcessHomePageReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**department** +
+__optional__|string
+|**organization** +
+__optional__|string
+|===
+
+
+[[_wanfangdeptresultvo]]
+=== WanFangDeptResultVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**department** +
+__optional__|string
+|**lights** +
+__optional__|< string > array
+|**person** +
+__optional__|string
+|===
+
+
+[[_wanfangprocessresp]]
+=== WanFangProcessResp
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**recommends** +
+__optional__|< string > array
+|**results** +
+__optional__|< <<_wanfangdeptresultvo,WanFangDeptResultVo>> > array
+|===
+
+
+
+
+

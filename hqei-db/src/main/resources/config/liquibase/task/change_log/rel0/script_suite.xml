@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <preConditions>
+        <dbms type="mysql" />
+    </preConditions>
+
+    <include file="classpath:config/liquibase/task/change_log/rel0/organization_standard.xml"/>
+    <include file="classpath:config/liquibase/task/change_log/rel0/organization_alias.xml"/>
+    <include file="classpath:config/liquibase/task/change_log/rel0/department.xml"/>
+    <include file="classpath:config/liquibase/task/change_log/rel0/history_process_data_task.xml"/>
+    <include file="classpath:config/liquibase/task/change_log/rel0/process_data_task.xml"/>
+    <include file="classpath:config/liquibase/task/change_log/rel0/standard_cprs_transform_data.xml"/>
+    <include file="classpath:config/liquibase/task/change_log/rel0/standard_project_data.xml"/>
+    <include file="classpath:config/liquibase/task/change_log/rel0/standard_talent_data.xml"/>
+    <include file="classpath:config/liquibase/task/change_log/rel0/standard_team_data.xml"/>
+</databaseChangeLog>

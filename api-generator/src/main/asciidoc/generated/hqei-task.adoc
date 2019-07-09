@@ -1,0 +1,3026 @@
+= Hqei-data-task RESTful APIs
+
+
+[[_overview]]
+== Overview
+数据任务接口文档
+
+
+=== URI scheme
+[%hardbreaks]
+__Host__ : localhost:8003
+__BasePath__ : /hqei/task
+
+
+=== Tags
+
+* department-controller : Department Controller
+* init-data-controller : Init Data Controller
+* organization-alias-controller : Organization Alias Controller
+* organization-controller : Organization Controller
+* process-data-task-controller : Process Data Task Controller
+* standard-data-controller : Standard Data Controller
+
+
+
+
+[[_paths]]
+== Resources
+
+[[_department-controller_resource]]
+=== Department-controller
+Department Controller
+
+
+[[_getauditdeptusingget]]
+==== getAuditDept
+....
+GET /department/getAuditDept
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**orgId** +
+__required__|orgId|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_b6504653d474aa75f63b14200fe01e16,BaseResponse«DepartmentVo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_getprocessdeptusingget]]
+==== getProcessDept
+....
+GET /department/getProcessDept
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**orgId** +
+__required__|orgId|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_b6504653d474aa75f63b14200fe01e16,BaseResponse«DepartmentVo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_modifydepartmentusingpost]]
+==== modifyDepartment
+....
+POST /department/modify
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**modifyDepartmentReq** +
+__required__|modifyDepartmentReq|<<_modifydepartmentreq,ModifyDepartmentReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_queryusingpost]]
+==== query
+....
+POST /department/query
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**queryDepartmentsReq** +
+__required__|queryDepartmentsReq|<<_querydepartmentsreq,QueryDepartmentsReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_702f22e905eb85017ce1782497792702,BaseResponse«List«DepartmentVo»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_querybyorgnameusingpost]]
+==== queryByOrgName
+....
+POST /department/queryByOrgName
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**orgName** +
+__required__|orgName|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_9bfb976fec55ad63d2d7bff27290579f,BaseResponse«Set«string»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_saveauditresultusingpost]]
+==== saveAuditResult
+....
+POST /department/saveAuditResult
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**deptAuditReq** +
+__required__|deptAuditReq|<<_deptauditreq,DeptAuditReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_savedepturlusingpost]]
+==== saveDeptUrl
+....
+POST /department/saveDeptUrl
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**saveDeptUrlReq** +
+__required__|saveDeptUrlReq|<<_savedepturlreq,SaveDeptUrlReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_getdepartmentusingget]]
+==== getDepartment
+....
+GET /department/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_b6504653d474aa75f63b14200fe01e16,BaseResponse«DepartmentVo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_deletedepartmentusingdelete]]
+==== deleteDepartment
+....
+DELETE /department/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_init-data-controller_resource]]
+=== Init-data-controller
+Init Data Controller
+
+
+[[_import14usingpost]]
+==== import14
+....
+POST /init/import14
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_import16usingpost]]
+==== import16
+....
+POST /init/import16
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_import17usingpost]]
+==== import17
+....
+POST /init/import17
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_import18usingpost]]
+==== import18
+....
+POST /init/import18
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_import19usingpost]]
+==== import19
+....
+POST /init/import19
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_import2usingpost]]
+==== import2
+....
+POST /init/import2
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_import20usingpost]]
+==== import20
+....
+POST /init/import20
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_import32usingpost]]
+==== import32
+....
+POST /init/import32
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_import4usingpost]]
+==== import4
+....
+POST /init/import4
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initorgstandardusingpost]]
+==== initOrgStandard
+....
+POST /init/orgStandard
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_organization-alias-controller_resource]]
+=== Organization-alias-controller
+Organization Alias Controller
+
+
+[[_getauditorgaliasusingget]]
+==== 获取下一条可审核机构别名数据
+....
+GET /organizationAlias/getAuditOrgAlias
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**taskId** +
+__required__|taskId|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2035b26b4fe0ec001cfb1caac4cc380b,BaseResponse«OrganizationAliasVo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_getprocessorgaliasusingget]]
+==== 获取下一条可加工机构别名数据
+....
+GET /organizationAlias/getProcessOrgAlias
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**taskId** +
+__required__|taskId|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2035b26b4fe0ec001cfb1caac4cc380b,BaseResponse«OrganizationAliasVo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_importorganizationaliasusingpost]]
+==== 原始表规范时，同步导入机构别名表
+....
+POST /organizationAlias/import
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**importOrganizationAliasReq** +
+__required__|importOrganizationAliasReq|<<_importorganizationaliasreq,ImportOrganizationAliasReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_processorgaliasusingpost]]
+==== 加工机构别名数据
+....
+POST /organizationAlias/processOrgAlias
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**processOrgAliasReq** +
+__required__|processOrgAliasReq|<<_processorgaliasreq,ProcessOrgAliasReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_queryorganizationaliasusingpost]]
+==== 查询机构别名
+....
+POST /organizationAlias/query
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**queryOrganizationAliasReq** +
+__required__|queryOrganizationAliasReq|<<_queryorganizationaliasreq,QueryOrganizationAliasReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_43f3a6a2fe69c5fc2196abe8d8c77970,PageResponse«List«OrganizationAliasVo»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_saveauditresultusingpost_1]]
+==== 保存机构别名审核结果
+....
+POST /organizationAlias/saveAuditResult
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**orgAliasAuditReq** +
+__required__|orgAliasAuditReq|<<_orgaliasauditreq,OrgAliasAuditReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_getorganizationaliasusingget]]
+==== 获取机构别名数据
+....
+GET /organizationAlias/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2035b26b4fe0ec001cfb1caac4cc380b,BaseResponse«OrganizationAliasVo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_deleteorganizationaliasusingdelete]]
+==== 删除机构别名数据
+....
+DELETE /organizationAlias/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_organization-controller_resource]]
+=== Organization-controller
+Organization Controller
+
+
+[[_getorganizationusingpost]]
+==== 通过名称获取规范机构
+....
+POST /organization/get
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**orgName** +
+__required__|orgName|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_c2b8bd5459ac78f2e4e0011198c1a1d4,BaseResponse«string»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_modifyorganizationusingpost]]
+==== 编辑规范机构
+....
+POST /organization/modify
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**modifyOrganizationReq** +
+__required__|modifyOrganizationReq|<<_modifyorganizationreq,ModifyOrganizationReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_queryorganizationsusingpost]]
+==== 查询规范机构
+....
+POST /organization/query
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**queryOrganizationsReq** +
+__required__|queryOrganizationsReq|<<_queryorganizationsreq,QueryOrganizationsReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_8434773881d6319a4f21a0eeb9a95ab6,PageResponse«List«OrganizationVo»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_deleteorganizationusingdelete]]
+==== 删除规范机构
+....
+DELETE /organization/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_process-data-task-controller_resource]]
+=== Process-data-task-controller
+Process Data Task Controller
+
+
+[[_createusingpost]]
+==== create
+....
+POST /processDataTask/create
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**createTaskReq** +
+__required__|createTaskReq|<<_createtaskreq,CreateTaskReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_finishusingpost]]
+==== 关闭任务
+....
+POST /processDataTask/finish
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**finishProcessDataTasksReq** +
+__required__|finishProcessDataTasksReq|<<_finishprocessdatatasksreq,FinishProcessDataTasksReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_getassigninfousingget]]
+==== 获取分配情况
+....
+GET /processDataTask/getAssignInfo
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**dataType** +
+__required__|dataType|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_8102a411459ef2b13f61d9ba18e9e268,BaseResponse«AssignInfoVo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_queryusingpost_1]]
+==== query
+....
+POST /processDataTask/query
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**queryProcessDataTasksReq** +
+__required__|queryProcessDataTasksReq|<<_queryprocessdatatasksreq,QueryProcessDataTasksReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_e291b17f7890b9ee8d37b0bf19329971,PageResponse«List«QueryProcessDataTaskVo»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_getusingget]]
+==== 获取任务
+....
+GET /processDataTask/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_723f299172a8abec26d231dcc89b4785,BaseResponse«ProcessDataTaskVo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_standard-data-controller_resource]]
+=== Standard-data-controller
+Standard Data Controller
+
+
+[[_auditstandarddatausingpost]]
+==== 审核规范数据
+....
+POST /standardData/auditStandardData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**auditStandardDataReq** +
+__required__|auditStandardDataReq|<<_auditstandarddatareq,AuditStandardDataReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_getauditstandarddatausingpost]]
+==== 获取可审核规范数据
+....
+POST /standardData/getAuditStandardData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**standardDataReq** +
+__required__|standardDataReq|<<_standarddatareq,StandardDataReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_867085b5433025da95b3c6f710d0f5a2,BaseResponse«StandardDataResp»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_getprocessstandarddatausingpost]]
+==== 获取可加工规范数据
+....
+POST /standardData/getProcessStandardData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**standardDataReq** +
+__required__|standardDataReq|<<_standarddatareq,StandardDataReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_867085b5433025da95b3c6f710d0f5a2,BaseResponse«StandardDataResp»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_getstandarddatausingpost]]
+==== 获取规范数据
+....
+POST /standardData/getStandardData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**standardDataReq** +
+__required__|standardDataReq|<<_standarddatareq,StandardDataReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_867085b5433025da95b3c6f710d0f5a2,BaseResponse«StandardDataResp»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_historyrecommendusingpost]]
+==== 历史推荐
+....
+POST /standardData/historyRecommend
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**historyRecommendReq** +
+__required__|historyRecommendReq|<<_historyrecommendreq,HistoryRecommendReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_80c437a92217d7b14b82c6af627ea1fa,BaseResponse«List«HistoryRecommendVo»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_importcprstransformdatausingpost]]
+==== importCprsTransformData
+....
+POST /standardData/importCprsTransformData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**importStandardCprsTransformDatasReq** +
+__required__|importStandardCprsTransformDatasReq|<<_importstandardcprstransformdatasreq,ImportStandardCprsTransformDatasReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initstandardprojectdatausingpost]]
+==== initStandardProjectData
+....
+POST /standardData/importProjectData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**importStandardProjectDatasReq** +
+__required__|importStandardProjectDatasReq|<<_importstandardprojectdatasreq,ImportStandardProjectDatasReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initstandardtalentdatausingpost]]
+==== initStandardTalentData
+....
+POST /standardData/importTalentData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**importStandardTalentDatasReq** +
+__required__|importStandardTalentDatasReq|<<_importstandardtalentdatasreq,ImportStandardTalentDatasReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initstandardteamdatausingpost]]
+==== initStandardTeamData
+....
+POST /standardData/importTeamData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**importStandardTeamDatasReq** +
+__required__|importStandardTeamDatasReq|<<_importstandardteamdatasreq,ImportStandardTeamDatasReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_processsecondorgusingpost]]
+==== 二级机构加工
+....
+POST /standardData/processSecondOrg
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**historyRecommendReq** +
+__required__|historyRecommendReq|<<_historyrecommendreq,HistoryRecommendReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_processstandarddatausingpost]]
+==== 加工规范数据
+....
+POST /standardData/processStandardData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**processStandardDataReq** +
+__required__|processStandardDataReq|<<_processstandarddatareq,ProcessStandardDataReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_selectbytaskidusingpost]]
+==== selectByTaskId
+....
+POST /standardData/selectByTaskId
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**queryStandardDatasReq** +
+__required__|queryStandardDatasReq|<<_querystandarddatasreq,QueryStandardDatasReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2d934fa713b857f908155a379badf398,PageResponse«List«StandardDataResp»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+
+
+[[_definitions]]
+== Definitions
+
+[[_assigninfovo]]
+=== AssignInfoVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**assignedNum** +
+__optional__|integer (int32)
+|**total** +
+__optional__|integer (int32)
+|**unAssignNum** +
+__optional__|integer (int32)
+|===
+
+
+[[_auditstandarddatareq]]
+=== AuditStandardDataReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditOpinion** +
+__optional__|string
+|**auditResult** +
+__optional__|integer (int32)
+|**auditUser** +
+__optional__|string
+|**dataType** +
+__optional__|integer (int32)
+|**deptZhName** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**secondOrg** +
+__optional__|string
+|===
+
+
+[[_baseresponse]]
+=== BaseResponse
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|object
+|===
+
+
+[[_8102a411459ef2b13f61d9ba18e9e268]]
+=== BaseResponse«AssignInfoVo»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|<<_assigninfovo,AssignInfoVo>>
+|===
+
+
+[[_b6504653d474aa75f63b14200fe01e16]]
+=== BaseResponse«DepartmentVo»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|<<_departmentvo,DepartmentVo>>
+|===
+
+
+[[_702f22e905eb85017ce1782497792702]]
+=== BaseResponse«List«DepartmentVo»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_departmentvo,DepartmentVo>> > array
+|===
+
+
+[[_80c437a92217d7b14b82c6af627ea1fa]]
+=== BaseResponse«List«HistoryRecommendVo»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_historyrecommendvo,HistoryRecommendVo>> > array
+|===
+
+
+[[_2035b26b4fe0ec001cfb1caac4cc380b]]
+=== BaseResponse«OrganizationAliasVo»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|<<_organizationaliasvo,OrganizationAliasVo>>
+|===
+
+
+[[_723f299172a8abec26d231dcc89b4785]]
+=== BaseResponse«ProcessDataTaskVo»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|<<_processdatataskvo,ProcessDataTaskVo>>
+|===
+
+
+[[_9bfb976fec55ad63d2d7bff27290579f]]
+=== BaseResponse«Set«string»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< string > array
+|===
+
+
+[[_867085b5433025da95b3c6f710d0f5a2]]
+=== BaseResponse«StandardDataResp»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|<<_standarddataresp,StandardDataResp>>
+|===
+
+
+[[_c2b8bd5459ac78f2e4e0011198c1a1d4]]
+=== BaseResponse«string»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|string
+|===
+
+
+[[_createtaskreq]]
+=== CreateTaskReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createUser** +
+__optional__|string
+|**dataType** +
+__optional__|integer (int32)
+|**newTaskList** +
+__optional__|< <<_createtaskvo,CreateTaskVo>> > array
+|**unAssignNum** +
+__optional__|integer (int32)
+|===
+
+
+[[_createtaskvo]]
+=== CreateTaskVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**dataType** +
+__optional__|integer (int32)
+|**dealUser** +
+__optional__|string
+|**endNum** +
+__optional__|integer (int32)
+|**num** +
+__optional__|string
+|**startNum** +
+__optional__|integer (int32)
+|===
+
+
+[[_departmentvo]]
+=== DepartmentVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditModify** +
+__optional__|integer (int32)
+|**deptEnAbbrName** +
+__optional__|string
+|**deptEnName** +
+__optional__|string
+|**deptUrl** +
+__optional__|string
+|**deptZhAbbrName** +
+__optional__|string
+|**deptZhName** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**orgId** +
+__optional__|integer (int64)
+|**orgUrl** +
+__optional__|string
+|**orgZhName** +
+__optional__|string
+|**status** +
+__optional__|integer (int32)
+|**subjectArea** +
+__optional__|string
+|===
+
+
+[[_deptauditreq]]
+=== DeptAuditReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditOpinion** +
+__optional__|string
+|**auditResult** +
+__optional__|integer (int32)
+|**auditUser** +
+__optional__|string
+|**deptId** +
+__optional__|integer (int64)
+|**deptUrl** +
+__optional__|string
+|===
+
+
+[[_finishprocessdatatasksreq]]
+=== FinishProcessDataTasksReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer (int64)
+|===
+
+
+[[_historyrecommendreq]]
+=== HistoryRecommendReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**orgZhName** +
+__optional__|string
+|**person** +
+__optional__|string
+|**processDeptDataId** +
+__optional__|integer (int64)
+|===
+
+
+[[_historyrecommendvo]]
+=== HistoryRecommendVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**count** +
+__optional__|integer (int32)
+|**recommendDept** +
+__optional__|string
+|**time** +
+__optional__|string
+|===
+
+
+[[_importorganizationaliasreq]]
+=== ImportOrganizationAliasReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createUser** +
+__optional__|string
+|**organizations** +
+__optional__|< <<_importorganizationvo,ImportOrganizationVo>> > array
+|===
+
+
+[[_importorganizationvo]]
+=== ImportOrganizationVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**address** +
+__optional__|string
+|**city** +
+__optional__|string
+|**createUser** +
+__optional__|string
+|**enAbbrName** +
+__optional__|string
+|**enName** +
+__optional__|string
+|**orgUrl** +
+__optional__|string
+|**province** +
+__optional__|string
+|**zhAbbrName** +
+__optional__|string
+|**zhName** +
+__optional__|string
+|===
+
+
+[[_importstandardcprstransformdatasreq]]
+=== ImportStandardCprsTransformDatasReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createUser** +
+__optional__|string
+|**standardCprsTransformDatas** +
+__optional__|< <<_standardcprstransformdatavo,StandardCprsTransformDataVo>> > array
+|===
+
+
+[[_importstandardprojectdatasreq]]
+=== ImportStandardProjectDatasReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createUser** +
+__optional__|string
+|**standardProjectDataVos** +
+__optional__|< <<_standardprojectdatavo,StandardProjectDataVo>> > array
+|===
+
+
+[[_importstandardtalentdatasreq]]
+=== ImportStandardTalentDatasReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createUser** +
+__optional__|string
+|**standardTalentDataVos** +
+__optional__|< <<_standardtalentdatavo,StandardTalentDataVo>> > array
+|===
+
+
+[[_importstandardteamdatasreq]]
+=== ImportStandardTeamDatasReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createUser** +
+__optional__|string
+|**standardTeamDataVos** +
+__optional__|< <<_standardteamdatavo,StandardTeamDataVo>> > array
+|===
+
+
+[[_modifydepartmentreq]]
+=== ModifyDepartmentReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**deptUrl** +
+__optional__|string
+|**deptZhName** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**modifyUser** +
+__optional__|string
+|===
+
+
+[[_modifyorganizationreq]]
+=== ModifyOrganizationReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**address** +
+__optional__|string
+|**city** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**isHospital** +
+__optional__|integer (int32)
+|**modifyUser** +
+__optional__|string
+|**orgUrl** +
+__optional__|string
+|**orgZhName** +
+__optional__|string
+|**province** +
+__optional__|string
+|===
+
+
+[[_orgaliasauditreq]]
+=== OrgAliasAuditReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditOpinion** +
+__optional__|string
+|**auditResult** +
+__optional__|integer (int32)
+|**auditUser** +
+__optional__|string
+|**isHospital** +
+__optional__|integer (int32)
+|**orgAliasId** +
+__optional__|integer (int64)
+|**orgStandardId** +
+__optional__|integer (int64)
+|**orgStandardName** +
+__optional__|string
+|**orgUrl** +
+__optional__|string
+|===
+
+
+[[_organizationaliasvo]]
+=== OrganizationAliasVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditModify** +
+__optional__|integer (int32)
+|**auditOpinion** +
+__optional__|string
+|**auditResult** +
+__optional__|integer (int32)
+|**auditTime** +
+__optional__|integer (int64)
+|**auditUser** +
+__optional__|string
+|**createTime** +
+__optional__|integer (int64)
+|**createUser** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**isHospital** +
+__optional__|integer (int32)
+|**modifyTime** +
+__optional__|integer (int64)
+|**modifyUser** +
+__optional__|string
+|**orgAlias** +
+__optional__|string
+|**orgStandardId** +
+__optional__|integer (int64)
+|**orgStandardName** +
+__optional__|string
+|**orgUrl** +
+__optional__|string
+|**originalDataId** +
+__optional__|integer (int64)
+|**status** +
+__optional__|integer (int32)
+|**taskId** +
+__optional__|integer (int64)
+|===
+
+
+[[_organizationvo]]
+=== OrganizationVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**address** +
+__optional__|string
+|**city** +
+__optional__|string
+|**createTime** +
+__optional__|integer (int64)
+|**createUser** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**isHospital** +
+__optional__|integer (int32)
+|**modifyTime** +
+__optional__|integer (int64)
+|**modifyUser** +
+__optional__|string
+|**orgEnAbbrName** +
+__optional__|string
+|**orgEnName** +
+__optional__|string
+|**orgUrl** +
+__optional__|string
+|**orgZhAbbrName** +
+__optional__|string
+|**orgZhName** +
+__optional__|string
+|**province** +
+__optional__|string
+|===
+
+
+[[_43f3a6a2fe69c5fc2196abe8d8c77970]]
+=== PageResponse«List«OrganizationAliasVo»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_organizationaliasvo,OrganizationAliasVo>> > array
+|**totalCount** +
+__optional__|integer (int64)
+|===
+
+
+[[_8434773881d6319a4f21a0eeb9a95ab6]]
+=== PageResponse«List«OrganizationVo»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_organizationvo,OrganizationVo>> > array
+|**totalCount** +
+__optional__|integer (int64)
+|===
+
+
+[[_e291b17f7890b9ee8d37b0bf19329971]]
+=== PageResponse«List«QueryProcessDataTaskVo»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_queryprocessdatataskvo,QueryProcessDataTaskVo>> > array
+|**totalCount** +
+__optional__|integer (int64)
+|===
+
+
+[[_2d934fa713b857f908155a379badf398]]
+=== PageResponse«List«StandardDataResp»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_standarddataresp,StandardDataResp>> > array
+|**totalCount** +
+__optional__|integer (int64)
+|===
+
+
+[[_processdatataskvo]]
+=== ProcessDataTaskVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**count** +
+__optional__|integer (int32)
+|**createTime** +
+__optional__|integer (int64)
+|**createUser** +
+__optional__|string
+|**dataType** +
+__optional__|integer (int32)
+|**dealUser** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**num** +
+__optional__|string
+|**status** +
+__optional__|integer (int32)
+|===
+
+
+[[_processorgaliasreq]]
+=== ProcessOrgAliasReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer (int64)
+|**isHospital** +
+__optional__|integer (int32)
+|**orgStandardId** +
+__optional__|integer (int64)
+|**orgStandardName** +
+__optional__|string
+|**orgUrl** +
+__optional__|string
+|**saveUser** +
+__optional__|string
+|===
+
+
+[[_processstandarddatareq]]
+=== ProcessStandardDataReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**dataType** +
+__optional__|integer (int32)
+|**deptZhName** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**secondOrg** +
+__optional__|string
+|===
+
+
+[[_querydepartmentsreq]]
+=== QueryDepartmentsReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**orderName** +
+__optional__|string
+|**orderType** +
+__optional__|string
+|**organizationId** +
+__optional__|integer (int64)
+|**pageNo** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**searchDeptContent** +
+__optional__|string
+|**searchOrgContent** +
+__optional__|string
+|**status** +
+__optional__|integer (int32)
+|===
+
+
+[[_queryorganizationaliasreq]]
+=== QueryOrganizationAliasReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**orderName** +
+__optional__|string
+|**orderType** +
+__optional__|string
+|**pageNo** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**searchContent** +
+__optional__|string
+|**status** +
+__optional__|integer (int32)
+|**taskId** +
+__optional__|integer (int64)
+|===
+
+
+[[_queryorganizationsreq]]
+=== QueryOrganizationsReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer (int64)
+|**isHospital** +
+__optional__|integer (int32)
+|**orderName** +
+__optional__|string
+|**orderType** +
+__optional__|string
+|**pageNo** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**searchContent** +
+__optional__|string
+|===
+
+
+[[_queryprocessdatataskvo]]
+=== QueryProcessDataTaskVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditedNum** +
+__optional__|integer (int32)
+|**dataType** +
+__optional__|integer (int32)
+|**dealUser** +
+__optional__|string
+|**num** +
+__optional__|string
+|**processRate** +
+__optional__|string
+|**processTotal** +
+__optional__|integer (int32)
+|**processedNum** +
+__optional__|integer (int32)
+|**status** +
+__optional__|integer (int32)
+|**taskId** +
+__optional__|integer (int64)
+|**trueRate** +
+__optional__|string
+|**unAuditNum** +
+__optional__|integer (int32)
+|**unProcessNum** +
+__optional__|integer (int32)
+|===
+
+
+[[_queryprocessdatatasksreq]]
+=== QueryProcessDataTasksReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**dataType** +
+__optional__|integer (int32)
+|**dealUser** +
+__optional__|string
+|**orderName** +
+__optional__|string
+|**orderType** +
+__optional__|string
+|**pageNo** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**searchContent** +
+__optional__|string
+|**status** +
+__optional__|integer (int32)
+|===
+
+
+[[_querystandarddatasreq]]
+=== QueryStandardDatasReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**dataType** +
+__optional__|integer (int32)
+|**orderName** +
+__optional__|string
+|**orderType** +
+__optional__|string
+|**pageNo** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**taskId** +
+__optional__|integer (int64)
+|===
+
+
+[[_savedepturlreq]]
+=== SaveDeptUrlReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**deptUrl** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**modifyUser** +
+__optional__|string
+|===
+
+
+[[_standardcprstransformdatavo]]
+=== StandardCprsTransformDataVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditModify** +
+__optional__|integer (int32)
+|**department** +
+__optional__|string
+|**organizations** +
+__optional__|< string > array
+|**originalDataId** +
+__optional__|integer (int64)
+|**originalDataType** +
+__optional__|integer (int32)
+|**patentType** +
+__optional__|integer (int32)
+|**persons** +
+__optional__|< string > array
+|**standardDataType** +
+__optional__|integer (int32)
+|**status** +
+__optional__|integer (int32)
+|**time** +
+__optional__|integer (int64)
+|**title** +
+__optional__|string
+|===
+
+
+[[_standarddatareq]]
+=== StandardDataReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**dataId** +
+__optional__|integer (int64)
+|**dataType** +
+__optional__|integer (int32)
+|**taskId** +
+__optional__|integer (int64)
+|===
+
+
+[[_standarddataresp]]
+=== StandardDataResp
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditOpinion** +
+__optional__|string
+|**auditResult** +
+__optional__|integer (int32)
+|**department** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**orgAlias** +
+__optional__|string
+|**orgStandardId** +
+__optional__|integer (int64)
+|**person** +
+__optional__|string
+|**secondOrg** +
+__optional__|string
+|**standardDataType** +
+__optional__|integer (int32)
+|**status** +
+__optional__|integer (int32)
+|**title** +
+__optional__|string
+|===
+
+
+[[_standardprojectdatavo]]
+=== StandardProjectDataVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditModify** +
+__optional__|integer (int32)
+|**department** +
+__optional__|string
+|**joinForm** +
+__optional__|integer (int32)
+|**level** +
+__optional__|integer (int32)
+|**organizations** +
+__optional__|< string > array
+|**originalDataId** +
+__optional__|integer (int64)
+|**originalDataType** +
+__optional__|integer (int32)
+|**persons** +
+__optional__|< string > array
+|**standardDataType** +
+__optional__|integer (int32)
+|**status** +
+__optional__|integer (int32)
+|**time** +
+__optional__|integer (int64)
+|**title** +
+__optional__|string
+|===
+
+
+[[_standardtalentdatavo]]
+=== StandardTalentDataVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditModify** +
+__optional__|integer (int32)
+|**dataType** +
+__optional__|integer (int32)
+|**department** +
+__optional__|string
+|**organizations** +
+__optional__|< string > array
+|**orginalDataId** +
+__optional__|integer (int64)
+|**orginalDataType** +
+__optional__|integer (int32)
+|**persons** +
+__optional__|< string > array
+|**status** +
+__optional__|integer (int32)
+|**time** +
+__optional__|integer (int64)
+|**title** +
+__optional__|string
+|===
+
+
+[[_standardteamdatavo]]
+=== StandardTeamDataVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**auditModify** +
+__optional__|integer (int32)
+|**dataType** +
+__optional__|integer (int32)
+|**department** +
+__optional__|string
+|**organizations** +
+__optional__|< string > array
+|**orginalDataId** +
+__optional__|integer (int64)
+|**orginalDataType** +
+__optional__|integer (int32)
+|**persons** +
+__optional__|< string > array
+|**status** +
+__optional__|integer (int32)
+|**time** +
+__optional__|integer (int64)
+|**title** +
+__optional__|string
+|===
+
+
+
+
+

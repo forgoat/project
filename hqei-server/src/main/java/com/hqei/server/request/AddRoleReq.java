@@ -8,19 +8,10 @@ import java.util.List;
 
 public class AddRoleReq {
 
-    private Long roleId;
     @NotBlank
     private String roleName;
     @NotEmpty
     private List<Long> permissions;
-
-    public Long getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Long roleId) {
-        this.roleId = roleId;
-    }
 
     public String getRoleName() {
         return roleName;

@@ -1,12 +1,12 @@
 server:
-  context-path: /hqeiServer
-  port: 8010
+  context-path: /
+  port: 8001
 
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/hqei-server?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&allowMultiQueries=true
     username: root
-    password: 123456
+    password: 12345678
     max-active: 100
     driver-class-name: com.mysql.jdbc.Driver
     time-between-eviction-runs-millis: 60000
@@ -14,6 +14,10 @@ spring:
     max-wait: 60000
     test-while-idle: true
     validation-query: select 1
+  http:
+    multipart:
+      max-file-size: 100Mb
+      max-request-size: 100Mb
 
 pagehelper:
   helperDialect: mysql
@@ -27,3 +31,21 @@ mybatis:
   type-aliases-package: com.hqei.server.domain
 
 
+static:
+  resource:
+    server:
+      ssh: #上传excel
+        ip: 119.3.24.105 #搭建后替换
+        port: 22
+        user: root
+        pwd: oir!uEw8ds8fJLgj
+      ip: 119.3.24.105
+      port: 80
+      destinationPath: /home/file/
+
+feign:
+  client:
+    config:
+      default:           #服务名，填写default为所有服务
+        connectTimeout: 2000
+        readTimeout: 20000

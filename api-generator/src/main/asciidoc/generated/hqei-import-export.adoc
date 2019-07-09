@@ -1,0 +1,767 @@
+= Hqei-data-import-export RESTful APIs
+
+
+[[_overview]]
+== Overview
+数据导入导出接口文档
+
+
+=== URI scheme
+[%hardbreaks]
+__Host__ : localhost:8002
+__BasePath__ : /hqei/importExport
+
+
+=== Tags
+
+* excel-import-controller : Excel Import Controller
+* init-data-controller : Init Data Controller
+* original-controller : Original Controller
+
+
+
+
+[[_paths]]
+== Resources
+
+[[_excel-import-controller_resource]]
+=== Excel-import-controller
+Excel Import Controller
+
+
+[[_importingtaskusingpost]]
+==== importingTask
+....
+POST /importingTask
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**importDatasReq** +
+__required__|importDatasReq|<<_importdatasreq,ImportDatasReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_queryimporttasksusingpost]]
+==== queryImportTasks
+....
+POST /queryImportTasks
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**queryImportTasksReq** +
+__required__|queryImportTasksReq|<<_queryimporttasksreq,QueryImportTasksReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_a88239ea8cf7be3a6d75b9451a21294e,PageResponse«List«ImportTaskVo»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_uploadexcelusingpost]]
+==== uploadExcel
+....
+POST /uploadExcel
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**dataType** +
+__required__|dataType|integer (int32)
+|**Query**|**userName** +
+__required__|userName|string
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_init-data-controller_resource]]
+=== Init-data-controller
+Init Data Controller
+
+
+[[_initcheungkongscholarsdatausingpost]]
+==== initCheungKongScholarsData
+....
+POST /initCheungKongScholarsData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**createUser** +
+__required__|createUser|string
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initinventionpatentauthorizationdatausingpost]]
+==== initInventionPatentAuthorizationData
+....
+POST /initInventionPatentAuthorizationData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**createUser** +
+__required__|createUser|string
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initmostleadtalentdatausingpost]]
+==== initMostLeadTalentData
+....
+POST /initMostLeadTalentData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**createUser** +
+__required__|createUser|string
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initnationalsciencemajorprojectdatausingpost]]
+==== initNationalScienceMajorProjectData
+....
+POST /initNationalScienceMajorProjectData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**createUser** +
+__required__|createUser|string
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initnsfcdatausingpost]]
+==== initNsfcData
+....
+POST /initNsfcData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**createUser** +
+__required__|createUser|string
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initnsfcexcellentyouthteamdatausingpost]]
+==== initNsfcExcellentYouthTeamData
+....
+POST /initNsfcExcellentYouthTeamData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**createUser** +
+__required__|createUser|string
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_initthousandtalentsplandatausingpost]]
+==== initThousandTalentsPlanData
+....
+POST /initThousandTalentsPlanData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**createUser** +
+__required__|createUser|string
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_inityouthtalentdatausingpost]]
+==== initYouthTalentData
+....
+POST /initYouthTalentData
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**createUser** +
+__required__|createUser|string
+|**FormData**|**excel** +
+__required__|excel|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_original-controller_resource]]
+=== Original-controller
+Original Controller
+
+
+[[_getsearchitemsusingget]]
+==== 获取原始数据查询条件
+....
+GET /original/getSearchItems
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**originalDataType** +
+__required__|originalDataType|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_8a35f83eb50e18700ff12b0440154cff,BaseResponse«List«SearchItemVo»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+[[_queryusingpost]]
+==== 原始数据查询
+....
+POST /original/query
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**queryOriginalDatasBaseReq** +
+__required__|queryOriginalDatasBaseReq|<<_queryoriginaldatasbasereq,QueryOriginalDatasBaseReq>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_ac66182a25fafab299e7958a3716ab22,PageResponse«List»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+
+
+[[_definitions]]
+== Definitions
+
+[[_baseresponse]]
+=== BaseResponse
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|object
+|===
+
+
+[[_8a35f83eb50e18700ff12b0440154cff]]
+=== BaseResponse«List«SearchItemVo»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_searchitemvo,SearchItemVo>> > array
+|===
+
+
+[[_importdatasreq]]
+=== ImportDatasReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createUser** +
+__optional__|string
+|**dataType** +
+__optional__|integer (int32)
+|**importTaskId** +
+__optional__|integer (int64)
+|===
+
+
+[[_importtaskvo]]
+=== ImportTaskVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**dataType** +
+__optional__|integer (int32)
+|**downloadErrorsUrl** +
+__optional__|string
+|**failure** +
+__optional__|integer (int32)
+|**fileName** +
+__optional__|string
+|**id** +
+__optional__|integer (int64)
+|**importTime** +
+__optional__|integer (int64)
+|**importUser** +
+__optional__|string
+|**repeat** +
+__optional__|integer (int32)
+|**status** +
+__optional__|integer (int32)
+|**success** +
+__optional__|integer (int32)
+|**total** +
+__optional__|integer (int32)
+|**uploadUser** +
+__optional__|string
+|===
+
+
+[[_a88239ea8cf7be3a6d75b9451a21294e]]
+=== PageResponse«List«ImportTaskVo»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< <<_importtaskvo,ImportTaskVo>> > array
+|**totalCount** +
+__optional__|integer (int64)
+|===
+
+
+[[_ac66182a25fafab299e7958a3716ab22]]
+=== PageResponse«List»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**code** +
+__optional__|string
+|**errorMap** +
+__optional__|< string, string > map
+|**msg** +
+__optional__|string
+|**result** +
+__optional__|< object > array
+|**totalCount** +
+__optional__|integer (int64)
+|===
+
+
+[[_queryimporttasksreq]]
+=== QueryImportTasksReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**dataType** +
+__optional__|integer (int32)
+|**orderName** +
+__optional__|string
+|**orderType** +
+__optional__|string
+|**pageNo** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**searchContent** +
+__optional__|string
+|**status** +
+__optional__|integer (int32)
+|===
+
+
+[[_queryoriginaldatasbasereq]]
+=== QueryOriginalDatasBaseReq
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**orderName** +
+__optional__|string
+|**orderType** +
+__optional__|string
+|**originalDataType** +
+__optional__|integer (int32)
+|**pageNo** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**searchItems** +
+__optional__|< <<_searchitemvo,SearchItemVo>> > array
+|===
+
+
+[[_searchitemvo]]
+=== SearchItemVo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**placeholder** +
+__optional__|string
+|**propName** +
+__optional__|string
+|**propValue** +
+__optional__|string
+|===
+
+
+
+
+

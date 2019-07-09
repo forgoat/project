@@ -103,4 +103,27 @@
       status = #{status,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <insert id="batchInsertRolePermission" useGeneratedKeys="true" keyProperty="id">
+    insert into sys_role_permission (role_id, permission_id, create_time, status)
+    values
+    <foreach collection="permissions" item="item" index="index" separator=",">
+      (#{roleId}, #{item},  CONCAT(UNIX_TIMESTAMP(NOW()), RIGHT(NOW(3), 3)), 1)
+    </foreach>
+  </insert>
+
+  <delete id="deleteByRoleId">
+    delete from sys_role_permission
+    where role_id = #{roleId,jdbcType=BIGINT}
+  </delete>
+
+  <delete id="batchRemoveRolePermission">
+      delete from sys_role_permission
+      WHERE role_id = #{roleId}
+      AND permission_id in (
+      <foreach collection="permissions" item="item" index="index" separator=",">
+        #{item}
+      </foreach>
+      )
+  </delete>
 </mapper>

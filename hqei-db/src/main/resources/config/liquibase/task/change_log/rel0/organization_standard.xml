@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="zhangchen">
+        <createTable tableName="organization_standard" remarks="机构规范数据表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="org_zh_name" type="varchar(128)"/>
+            <column name="org_en_name" type="varchar(128)"/>
+            <column name="org_zh_abbr_name" type="varchar(128)"/>
+            <column name="org_en_abbr_name" type="varchar(128)" />
+            <column name="org_url" type="varchar(256)"/>
+            <column name="province" type="varchar(64)"/>
+            <column name="city" type="varchar(64)" />
+            <column name="address" type="varchar(256)" />
+            <column name="is_hospital" type="int" />
+            <column name="create_time" type="bigint"/>
+            <column name="create_user" type="varchar(128)"/>
+            <column name="modify_time" type="bigint"/>
+            <column name="modify_user" type="varchar(128)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="addOrganizationStandardUniqueIndex" author="zyx">
+        <sql>CREATE UNIQUE INDEX orgZhNameIndex ON organization_standard(org_zh_name); </sql>
+    </changeSet>
+</databaseChangeLog>

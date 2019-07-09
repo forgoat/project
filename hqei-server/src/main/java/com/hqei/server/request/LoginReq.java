@@ -1,13 +1,25 @@
 package com.hqei.server.request;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.validation.constraints.NotNull;
 
 public class LoginReq {
 
-    @NotNull
+    @NotBlank(message = "用户名不能为空！")
     private String username;
-    @NotNull
+    @NotBlank(message = "密码不能为空！")
     private String password;
+    @NotNull
+    private Long roleId;
+
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
 
     public String getUsername() {
         return username;

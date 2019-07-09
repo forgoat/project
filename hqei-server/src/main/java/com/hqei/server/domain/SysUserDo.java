@@ -3,8 +3,6 @@ package com.hqei.server.domain;
 import com.hqei.common.IdDo;
 import org.hibernate.validator.constraints.NotBlank;
 
-import javax.validation.constraints.NotNull;
-
 public class SysUserDo extends IdDo{
 
     @NotBlank
@@ -13,11 +11,18 @@ public class SysUserDo extends IdDo{
     private String password;
     @NotBlank
     private String nickname;
-    @NotNull
-    private Long roleId;
     private Long createTime;
     private Long updateTime;
+    private String salt;
     private Integer status;
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
 
     public String getUsername() {
         return username;
@@ -41,14 +46,6 @@ public class SysUserDo extends IdDo{
 
     public void setNickname(String nickname) {
         this.nickname = nickname == null ? null : nickname.trim();
-    }
-
-    public Long getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Long roleId) {
-        this.roleId = roleId;
     }
 
     public Long getCreateTime() {

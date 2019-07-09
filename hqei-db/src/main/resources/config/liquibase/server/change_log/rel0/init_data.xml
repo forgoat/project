@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="init_data" author="hjm">
+        <sql>
+            INSERT INTO `sys_user` VALUES (10000,'admin','wUgcTxeOQkKWUgrqIV0aAZef+04C5bUpEsX6nnSMggw=','超级用户', unix_timestamp(now())*1000 ,unix_timestamp(now())*1000, 1, 'ObsrS5hecXBCgjmMWocfhQ==');
+            INSERT INTO `sys_role` VALUES (1,'超级管理员',unix_timestamp(now())*1000 ,unix_timestamp(now())*1000 ,1);
+            INSERT INTO `sys_user_role` VALUES (1,10000,1);
+            INSERT INTO `sys_permission` (menu_code, menu_name, permission_code, permission_name, required_permission) VALUES
+            ('role','角色权限','role:list','列表',1),
+            ('role','角色权限','role:add','新增',2),
+            ('role','角色权限','role:update','修改',2),
+            ('role','角色权限','role:delete','删除',2),
+
+            ('user','用户','user:list','列表',1),
+            ('user','用户','user:add','新增',2),
+            ('user','用户','user:update','修改',2),
+            ('user','用户','user:delete','删除',2),
+
+            ('task','任务管理','task:list','列表',1),
+            ('task','任务管理','task:add','新增',2),
+            ('task','任务管理','task:process','加工',2),
+            ('task','任务管理','task:audit','审核',2),
+            ('task','任务管理','task:update','修改',2),
+
+            ('org','机构管理','org:list','列表',1),
+            ('org','机构管理','org:process','加工',2),
+            ('org','机构管理','org:audit','审核',2),
+            ('org','机构管理','org:update','修改',2),
+            ('org','机构管理','org:delete','删除',2),
+
+            ('dept','科室管理','dept:list','列表',1),
+            ('dept','科室管理','dept:process','加工',2),
+            ('dept','科室管理','dept:audit','审核',2),
+            ('dept','科室管理','dept:update','修改',2),
+            ('dept','科室管理','dept:delete','删除',2),
+
+            ('data','数据管理','data:list','列表',1),
+            ('data','数据管理','data:import','导入',2),
+            ('data','数据管理','data:export','导出',2),
+            ('data','数据管理','data:audit','审核',2);
+        </sql>
+    </changeSet>
+</databaseChangeLog>

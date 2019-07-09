@@ -21,13 +21,13 @@
     delete from sys_role
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.hqei.server.domain.SysRoleDo" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insert" parameterType="com.hqei.server.domain.SysRoleDo">
     insert into sys_role (id, role_name, create_time, 
       update_time, status)
     values (#{id,jdbcType=BIGINT}, #{roleName,jdbcType=VARCHAR}, #{createTime,jdbcType=BIGINT}, 
       #{updateTime,jdbcType=BIGINT}, #{status,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqei.server.domain.SysRoleDo" >
+  <insert id="insertSelective" parameterType="com.hqei.server.domain.SysRoleDo" useGeneratedKeys="true" keyProperty="id">
     insert into sys_role
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -89,5 +89,92 @@
       update_time = #{updateTime,jdbcType=BIGINT},
       status = #{status,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="hasUsers" resultType="int">
+    SELECT count(0)
+    FROM sys_role a
+    INNER JOIN sys_user_role b ON a.id = b.role_id and a.id = #{roleId,jdbcType=BIGINT}
+  </select>
+
+  <select id="listAll" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List" />
+    FROM sys_role
+    WHERE status = 1
+  </select>
+
+  <resultMap id="roleMap" type="com.hqei.server.vo.SysRoleVo">
+    <id column="roleId" property="roleId"/>
+    <result column="roleName" property="roleName"/>
+    <collection property="users" ofType="com.hqei.server.vo.SimpleUserVo">
+      <id column="userId" property="userId"/>
+      <result column="nickname" property="nickname"/>
+    </collection>
+    <collection property="menus" ofType="com.hqei.server.vo.SimpleMenuVo">
+      <id column="menuCode" property="menuCode"/>
+      <result column="menuName" property="menuName"/>
+      <collection property="permissions" ofType="com.hqei.server.vo.SimplePermissionVo">
+        <id column="permissionId" property="permissionId"/>
+        <result column="permissionName" property="permissionName"/>
+      </collection>
+    </collection>
+  </resultMap>
+
+  <select id="listTable" resultMap="roleMap">
+      SELECT
+          r.id roleId,
+          r.role_name roleName,
+          u.id userId,
+          u.nickname nickname,
+          p.id permissionId,
+          p.menu_code menuCode,
+          p.menu_name menuName,
+          p.permission_name permissionName
+      FROM
+          sys_role r
+          LEFT JOIN sys_user_role ur ON r.id = ur.role_id
+          LEFT JOIN sys_user u ON ur.user_id = u.id
+          AND u.status = 1
+          LEFT JOIN sys_role_permission rp ON r.id = rp.role_id
+          AND rp.status = 1
+          LEFT JOIN sys_permission p ON rp.permission_id = p.id
+      WHERE
+          r.status = 1
+      ORDER BY
+          r.id,
+          p.id
+  </select>
+
+  <resultMap id="roleForUpdateMap" type="com.hqei.server.vo.RoleForUpdateVo">
+    <id column="roleId" property="roleId"/>
+    <result column="roleName" property="roleName"/>
+    <collection property="users" ofType="Long">
+      <id column="userId"/>
+    </collection>
+    <collection property="permissionIds" ofType="Long">
+      <id column="permissionId"/>
+    </collection>
+  </resultMap>
+
+  <select id="getRoleForUpdate" resultMap="roleForUpdateMap">
+    SELECT
+    r.id        roleId,
+    r.role_name roleName,
+    u.id        userId,
+    p.id        permissionId
+    FROM sys_role r
+    LEFT JOIN sys_user_role ur ON r.id = ur.role_id
+    LEFT JOIN sys_user u ON ur.user_id = u.id AND u.status = 1
+    LEFT JOIN sys_role_permission rp ON r.id = rp.role_id AND rp.status = 1
+    LEFT JOIN sys_permission p ON rp.permission_id = p.id
+    WHERE r.id = #{roleId}
+  </select>
+
+  <update id="updateRoleName">
+    UPDATE sys_role
+    SET
+    role_name = #{roleName}
+    WHERE id = #{roleId}
   </update>
 </mapper>

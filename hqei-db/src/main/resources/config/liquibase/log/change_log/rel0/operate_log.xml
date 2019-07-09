@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="lingeng">
+        <createTable tableName="operate_log" remarks="操作日志表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="operate_type" type="int" remarks="操作类型"/>
+            <column name="task_id" type="bigint" remarks="任务ID"/>
+            <column name="standard_data_id" type="bigint" remarks="规范数据ID"></column>
+            <column name="standard_data_type" type="int"  remarks="规范数据类型"/>
+            <column name="operate_user" type="varchar(32)" remarks="操作人账号"/>
+            <column name="old_value" type="varchar(256)" remarks="旧值"/>
+            <column name="new_value" type="varchar(256)" remarks="新值"/>
+            <column name="operate_time" type="bigint" remarks="操作时间"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

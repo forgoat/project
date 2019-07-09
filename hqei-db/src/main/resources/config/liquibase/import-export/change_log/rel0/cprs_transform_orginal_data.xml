@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="zyx">
+        <createTable tableName="cprs_transform_orginal_data" remarks="专利转化数据原始表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="data_type" type="int"/>
+            <column name="unique_char" type="varchar(256)"/>
+            <column name="ti_en" type="varchar(256)"/>
+            <column name="ab_cn" type="varchar(256)" />
+            <column name="ti_cn" type="varchar(256)"/>
+            <column name="ab_en" type="text"/>
+            <column name="pub_num" type="varchar(64)" />
+            <column name="pub_date" type="varchar(256)" />
+            <column name="appli_num" type="varchar(256)" />
+            <column name="appli_date" type="varchar(256)" />
+            <column name="applicant" type="text" />
+            <column name="applicant_add" type="varchar(256)" />
+            <column name="current_law" type="varchar(256)" />
+            <column name="patent_validity" type="varchar(256)" />
+            <column name="first_pub_date" type="varchar(256)" />
+            <column name="authori_proclam_day" type="varchar(256)" />
+            <column name="patent_type" type="varchar(256)" />
+            <column name="inventor_all" type="text" />
+            <column name="inventor" type="varchar(32)" />
+            <column name="ipc" type="text" />
+            <column name="applicant_type" type="varchar(256)" />
+            <column name="organization" type="varchar(128)" />
+            <column name="assignee" type="text" />
+            <column name="assignor" type="text" />
+            <column name="licensor" type="text" />
+            <column name="licensee" type="text" />
+            <column name="visible" type="int" />
+            <column name="status" type="int" />
+            <column name="verify" type="int" />
+            <column name="user_ID" type="bigint" />
+            <column name="hosp" type="varchar(256)" />
+            <column name="is_delete" type="varchar(256)" />
+            <column name="department" type="varchar(256)" />
+            <column name="gb_code_dept" type="varchar(256)" />
+            <column name="gb_name_dept" type="varchar(256)" />
+            <column name="gb_code_content" type="varchar(256)" />
+            <column name="gb_name_content" type="varchar(256)" />
+            <column name="gb_name" type="varchar(256)" />
+            <column name="gb_code" type="varchar(256)" />
+            <column name="remark" type="text" />
+            <column name="annotation" type="text" />
+            <column name="hosp_verify" type="varchar(256)" />
+            <column name="verify_user" type="varchar(256)" />
+            <column name="hosp_id" type="varchar(256)" />
+            <column name="hosp_name" type="varchar(256)" />
+            <column name="hosp_match" type="varchar(256)" />
+            <column name="assignor_match" type="text" />
+            <column name="licensor_match" type="text" />
+            <column name="is_address_match" type="varchar(256)" />
+            <column name="licensing_filing_date" type="varchar(256)" />
+            <column name="assignment_date" type="varchar(256)" />
+            <column name="licensing_filing_year" type="varchar(256)" />
+            <column name="assignment_year" type="varchar(256)" />
+            <column name="is_match" type="varchar(256)" />
+            <column name="is_hosp_match" type="varchar(256)" />
+            <column name="id2" type="varchar(256)" />
+            <column name="hosp_depar" type="varchar(256)" />
+            <column name="gb_code2" type="varchar(256)" />
+            <column name="gb_name2" type="varchar(256)" />
+            <column name="istcm" type="varchar(256)" />
+            <column name="create_time" type="bigint"/>
+            <column name="create_user" type="varchar(128)"/>
+            <column name="modify_time" type="bigint"/>
+            <column name="modify_user" type="varchar(128)"/>
+            <column name="sync_flag" type="int"></column>
+        </createTable>
+    </changeSet>
+    <changeSet id="addInventorAndPubNumAndOrgUniqueIndex" author="zyx">
+        <sql>CREATE UNIQUE INDEX uniqueIndex ON cprs_transform_orginal_data(pub_num,inventor,organization); </sql>
+    </changeSet>
+</databaseChangeLog>

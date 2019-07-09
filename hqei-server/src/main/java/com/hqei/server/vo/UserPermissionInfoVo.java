@@ -6,8 +6,8 @@ public class UserPermissionInfoVo {
 
     private Long userId;
     private String nickname;
-    private Long roleId;
-    private String roleName;
+    private Set<Long> roleIds;
+    private Set<String> roleNames;
     private Set<String> menuList;
     private Set<String> permissionList;
 
@@ -27,20 +27,20 @@ public class UserPermissionInfoVo {
         this.nickname = nickname;
     }
 
-    public Long getRoleId() {
-        return roleId;
+    public Set<Long> getRoleIds() {
+        return roleIds;
     }
 
-    public void setRoleId(Long roleId) {
-        this.roleId = roleId;
+    public void setRoleIds(Set<Long> roleIds) {
+        this.roleIds = roleIds;
     }
 
-    public String getRoleName() {
-        return roleName;
+    public Set<String> getRoleNames() {
+        return roleNames;
     }
 
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
+    public void setRoleNames(Set<String> roleNames) {
+        this.roleNames = roleNames;
     }
 
     public Set<String> getMenuList() {

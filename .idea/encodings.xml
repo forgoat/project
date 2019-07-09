@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/api-generator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hqei-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hqei-data-import-export" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hqei-data-log" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hqei-data-process" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hqei-data-task" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hqei-db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hqei-server" charset="UTF-8" />
+  </component>
+</project>

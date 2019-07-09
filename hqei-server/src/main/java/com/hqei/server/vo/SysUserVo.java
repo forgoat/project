@@ -1,18 +1,27 @@
 package com.hqei.server.vo;
 
+import java.util.List;
 import java.util.Set;
 
 public class SysUserVo{
 
     private Long userId;
-    private String roleName;
     private String username;
     private String nickname;
     private Long roleId;
     private Long createTime;
     private Long updateTime;
     private Integer status;
+    private List<SimpleRoleVo> roles;
     private Set<String> permissionList;
+
+    public List<SimpleRoleVo> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<SimpleRoleVo> roles) {
+        this.roles = roles;
+    }
 
     public Long getUserId() {
         return userId;
@@ -20,14 +29,6 @@ public class SysUserVo{
 
     public void setUserId(Long userId) {
         this.userId = userId;
-    }
-
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
     }
 
     public String getUsername() {

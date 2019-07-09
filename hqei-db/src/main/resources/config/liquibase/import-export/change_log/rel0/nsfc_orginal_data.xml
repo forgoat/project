@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="zhangchen">
+        <createTable tableName="nsfc_orginal_data" remarks="国自然数据原始表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="data_type" type="int"/>
+            <column name="approval_number" type="varchar(32)"/>
+            <column name="subject_code" type="varchar(32)"/>
+            <column name="name" type="varchar(256)" />
+            <column name="leader" type="varchar(32)"/>
+            <column name="organization" type="varchar(64)"/>
+            <column name="hosp" type="varchar(64)" />
+            <column name="department" type="varchar(64)" />
+            <column name="approved_amount" type="varchar(32)" />
+            <column name="duration" type="varchar(64)" />
+            <column name="grant_code" type="varchar(64)" />
+            <column name="grant_name" type="varchar(64)" />
+            <column name="sub_grant_code" type="varchar(64)" />
+            <column name="sub_grant_name" type="varchar(64)" />
+            <column name="approval_year" type="varchar(32)" />
+            <column name="created_at" type="varchar(64)" />
+            <column name="updated_at" type="varchar(64)" />
+            <column name="nsfc_id" type="varchar(32)" />
+            <column name="create_time" type="bigint"/>
+            <column name="create_user" type="varchar(128)"/>
+            <column name="modify_time" type="bigint"/>
+            <column name="modify_user" type="varchar(128)"/>
+            <column name="sync_flag" type="int"></column>
+        </createTable>
+    </changeSet>
+    <!--<changeSet id="addInventorAndPubNumAndOrgUniqueIndex" author="zhangchen">-->
+        <!--<sql>CREATE UNIQUE INDEX uniqueIndex ON cprs_transform_orginal_data(pub_num,inventor,organization); </sql>-->
+    <!--</changeSet>-->
+</databaseChangeLog>

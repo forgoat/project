@@ -1,0 +1,261 @@
+{
+    "code": "0",
+    "msg": "success!",
+    "errorMap": null,
+    "result": [
+        {
+            "roleId": 1,
+            "roleName": "超级管理员",
+            "menus": [],
+            "users": [
+                {
+                    "userId": 10000,
+                    "nickname": "超级用户",
+                    "password": null
+                }
+            ]
+        },
+        {
+            "roleId": 10000,
+            "roleName": "加工人员",
+            "menus": [
+                {
+                    "menuCode": "task",
+                    "menuName": "任务管理",
+                    "permissions": [
+                        {
+                            "permissionId": 10008,
+                            "permissionName": "列表"
+                        },
+                        {
+                            "permissionId": 10010,
+                            "permissionName": "加工"
+                        },
+                        {
+                            "permissionId": 10012,
+                            "permissionName": "修改"
+                        }
+                    ]
+                },
+                {
+                    "menuCode": "org",
+                    "menuName": "机构管理",
+                    "permissions": [
+                        {
+                            "permissionId": 10013,
+                            "permissionName": "列表"
+                        },
+                        {
+                            "permissionId": 10014,
+                            "permissionName": "加工"
+                        },
+                        {
+                            "permissionId": 10016,
+                            "permissionName": "修改"
+                        }
+                    ]
+                }
+            ],
+            "users": [
+                {
+                    "userId": 10007,
+                    "nickname": "user_process_004",
+                    "password": null
+                },
+                {
+                    "userId": 10011,
+                    "nickname": "user_process_008",
+                    "password": null
+                },
+                {
+                    "userId": 10004,
+                    "nickname": "user_process_001",
+                    "password": null
+                },
+                {
+                    "userId": 10008,
+                    "nickname": "user_process_005",
+                    "password": null
+                },
+                {
+                    "userId": 10012,
+                    "nickname": "user_process_009",
+                    "password": null
+                },
+                {
+                    "userId": 10005,
+                    "nickname": "user_process_002",
+                    "password": null
+                },
+                {
+                    "userId": 10009,
+                    "nickname": "user_process_006",
+                    "password": null
+                },
+                {
+                    "userId": 10013,
+                    "nickname": "user_process_010",
+                    "password": null
+                },
+                {
+                    "userId": 10006,
+                    "nickname": "user_process_003",
+                    "password": null
+                },
+                {
+                    "userId": 10010,
+                    "nickname": "user_process_007",
+                    "password": null
+                }
+            ]
+        },
+        {
+            "roleId": 10001,
+            "roleName": "数据管理员",
+            "menus": [
+                {
+                    "menuCode": "task",
+                    "menuName": "任务管理",
+                    "permissions": [
+                        {
+                            "permissionId": 10008,
+                            "permissionName": "列表"
+                        },
+                        {
+                            "permissionId": 10009,
+                            "permissionName": "新增"
+                        },
+                        {
+                            "permissionId": 10010,
+                            "permissionName": "加工"
+                        },
+                        {
+                            "permissionId": 10012,
+                            "permissionName": "修改"
+                        }
+                    ]
+                },
+                {
+                    "menuCode": "org",
+                    "menuName": "机构管理",
+                    "permissions": [
+                        {
+                            "permissionId": 10013,
+                            "permissionName": "列表"
+                        },
+                        {
+                            "permissionId": 10014,
+                            "permissionName": "加工"
+                        },
+                        {
+                            "permissionId": 10016,
+                            "permissionName": "修改"
+                        },
+                        {
+                            "permissionId": 10017,
+                            "permissionName": "删除"
+                        }
+                    ]
+                },
+                {
+                    "menuCode": "data",
+                    "menuName": "数据管理",
+                    "permissions": [
+                        {
+                            "permissionId": 10023,
+                            "permissionName": "列表"
+                        },
+                        {
+                            "permissionId": 10024,
+                            "permissionName": "导入"
+                        },
+                        {
+                            "permissionId": 10025,
+                            "permissionName": "导出"
+                        },
+                        {
+                            "permissionId": 10026,
+                            "permissionName": "审核"
+                        }
+                    ]
+                }
+            ],
+            "users": [
+                {
+                    "userId": 10001,
+                    "nickname": "wuqq",
+                    "password": null
+                },
+                {
+                    "userId": 10002,
+                    "nickname": "zhangchen",
+                    "password": null
+                },
+                {
+                    "userId": 10003,
+                    "nickname": "hejianming",
+                    "password": null
+                }
+            ]
+        },
+        {
+            "roleId": 10002,
+            "roleName": "审核人员",
+            "menus": [
+                {
+                    "menuCode": "task",
+                    "menuName": "任务管理",
+                    "permissions": [
+                        {
+                            "permissionId": 10008,
+                            "permissionName": "列表"
+                        },
+                        {
+                            "permissionId": 10009,
+                            "permissionName": "新增"
+                        },
+                        {
+                            "permissionId": 10010,
+                            "permissionName": "加工"
+                        },
+                        {
+                            "permissionId": 10011,
+                            "permissionName": "审核"
+                        },
+                        {
+                            "permissionId": 10012,
+                            "permissionName": "修改"
+                        }
+                    ]
+                },
+                {
+                    "menuCode": "org",
+                    "menuName": "机构管理",
+                    "permissions": [
+                        {
+                            "permissionId": 10013,
+                            "permissionName": "列表"
+                        },
+                        {
+                            "permissionId": 10014,
+                            "permissionName": "加工"
+                        },
+                        {
+                            "permissionId": 10015,
+                            "permissionName": "审核"
+                        },
+                        {
+                            "permissionId": 10016,
+                            "permissionName": "修改"
+                        },
+                        {
+                            "permissionId": 10017,
+                            "permissionName": "删除"
+                        }
+                    ]
+                }
+            ],
+            "users": []
+        }
+    ]
+}

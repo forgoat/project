@@ -1,0 +1,7 @@
+
+const JumpPath = {
+}
+
+export default{
+
+}

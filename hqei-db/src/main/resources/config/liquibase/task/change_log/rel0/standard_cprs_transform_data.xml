@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="zhangchen">
+        <createTable tableName="standard_cprs_transform_data" remarks="规范专利转化数据表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <!--公共字段-->
+            <column name="standard_data_type" type="int"/>
+            <column name="original_data_type" type="int"/>
+            <column name="title" type="varchar(512)"/>
+            <column name="org_standard_id" type="bigint"/>
+            <column name="org_alias" type="varchar(128)"/>
+            <column name="second_org" type="varchar(128)"/>
+            <column name="person" type="varchar(128)" />
+            <column name="department" type="varchar(128)" />
+            <column name="subject" type="varchar(256)" />
+            <column name="used" type="int" />
+            <column name="order_weight" type="int" />
+            <column name="order" type="int" />
+            <column name="time" type="bigint" />
+            <column name="task_id" type="bigint"/>
+            <column name="original_data_id" type="bigint"/>
+            <column name="create_time" type="bigint"/>
+            <column name="create_user" type="varchar(128)"/>
+            <column name="modify_time" type="bigint"/>
+            <column name="modify_user" type="varchar(128)"/>
+            <column name="status" type="int"></column>
+            <column name="audit_result" type="int"></column>
+            <column name="audit_opinion" type="varchar(512)"></column>
+            <column name="audit_time" type="bigint"></column>
+            <column name="audit_user" type="varchar(64)"></column>
+            <column name="audit_modify" type="int"></column>
+            <!--专属字段-->
+            <column name="patent_type" type="int"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="addColumnIsHospital" author="zhangchen">
+        <addColumn tableName="standard_cprs_transform_data">
+            <column name="is_hospital" type="int"></column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="addColumnTaskLevel" author="zhangchen">
+        <addColumn tableName="standard_cprs_transform_data">
+            <column name="task_level" type="int"></column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

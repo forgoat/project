@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="89900217-d453-4a2e-bf27-a836d2569f28" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/heqi-web/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/build/check-versions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/build/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/build/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/build/vue-loader.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/build/webpack.base.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/build/webpack.dev.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/build/webpack.prod.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/config/dev.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/permission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/router/_import_development.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/router/_import_production.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/store/getters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/store/modules/permission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/store/modules/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/utils/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/utils/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/utils/hasPermission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/src/views/login/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heqi-web/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-common/src/main/java/com/hqei/common/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-common/src/main/java/com/hqei/common/BaseResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-common/src/main/java/com/hqei/common/enums/BaseCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-common/src/main/java/com/hqei/common/enums/BaseCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-approve/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-approve/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-approve/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-approve/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-approve/src/main/java/com/hqei/data/approve/HqeiDataApproveApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-approve/src/main/java/com/hqei/data/approve/controller/SysController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-approve/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-approve/src/test/java/com/hqei/HqeiDataApproveApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-import/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-import/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-import/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-import/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-import/src/main/java/com/hqei/data/approve/HqeiDataImportApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-import/src/main/java/com/hqei/data/approve/controller/SysController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-import/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-import/src/test/java/com/hqei/HqeiDataImportApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-process/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-process/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-process/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-process/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-process/src/main/java/com/hqei/data/process/HqeiDataProcessApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-process/src/main/java/com/hqei/data/process/controller/SysController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-process/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-data-process/src/test/java/com/hqei/data/process/hqeidataprocess/HqeiDataProcessApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-db/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-db/src/main/resources/application-data-approve.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-db/src/main/resources/application-data-process.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-db/src/main/resources/application-data-process.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-db/src/main/resources/application-server.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-db/src/main/resources/application-server.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-db/src/main/resources/config/liquibase/server/change_log/rel0/script_suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-db/src/main/resources/config/liquibase/server/change_log/rel0/script_suite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-db/src/main/resources/config/liquibase/server/change_log/rel0/sys_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-db/src/main/resources/config/liquibase/server/change_log/rel0/sys_user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-db/src/main/resources/config/liquibase/server/change_log/rel0/user.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/HqeiServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/HqeiServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/AjaxPermissionsAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/AjaxPermissionsAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/ShiroConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/ShiroConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/UserRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/SysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/SysController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/SysUserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysPermissionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysPermissionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysRoleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysRolePermissionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysRolePermissionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/SysPermissionDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/SysPermissionDo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/SysUserDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/SysUserDo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/UserDo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/enums/ErrorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/enums/ErrorEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/request/AddRoleReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/request/AddRoleReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/request/LoginReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/request/LoginReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/request/ModifyUserReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/request/ModifyUserReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/request/PageReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/response/PageResp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysPermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysRolePermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysRolePermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysPermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysPermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysRolePermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysRolePermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/util/CommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/RoleAllInfoVo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/SimpleUserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/SimpleUserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/SysUserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/SysUserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/UserPermissionInfoVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/UserPermissionInfoVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/resources/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/resources/generator/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/resources/mapper/SysPermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/resources/mapper/SysPermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/resources/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/resources/mapper/SysRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/resources/mapper/SysRolePermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/resources/mapper/SysRolePermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/resources/mapper/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/main/resources/mapper/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/main/resources/mapper/UserDoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hqei-server/src/test/java/com/hqei/server/HqeiServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/hqei-server/src/test/java/com/hqei/server/HqeiServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/hqei-data-process/target/" />
+    <ignored path="$PROJECT_DIR$/api-generator/target/" />
+    <ignored path="$PROJECT_DIR$/hqei-data-task/target/" />
+    <ignored path="$PROJECT_DIR$/hqei-data-log/target/" />
+    <ignored path="$PROJECT_DIR$/hqei-common/target/" />
+    <ignored path="$PROJECT_DIR$/hqei-data-import-export/target/" />
+    <ignored path="$PROJECT_DIR$/hqei-db/target/" />
+    <ignored path="$PROJECT_DIR$/hqei-server/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/SysController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hqei-common/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hqei-server/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/exception/GlobalExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/AjaxPermissionsAuthorizationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/UserRealm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/system/DefaultView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysPermissionServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysRolePermissionServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysRoleServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/hqei-server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/hqei-server/pom.xml" />
+        <option value="$PROJECT_DIR$/hqei-web/src/router/index.js" />
+        <option value="$PROJECT_DIR$/hqei-db/src/main/resources/application-server.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="60" />
+    <option name="y" value="23" />
+    <option name="width" value="1380" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-common" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-common" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-common" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-common" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-common" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-common" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-common" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-common" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-project" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="exception" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="shiro" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="system" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="user" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="domain" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="service" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="service" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="impl" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hqei" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="vo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hqei-project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="hqei-server" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562668767235" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.HqeiServerApplication">
+    <configuration name="HqeiDataImportExportApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hqei-data-import-export" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hqei.data.importexport.HqeiDataImportExportApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HqeiDataLogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hqei-data-log" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hqei.data.log.HqeiDataLogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HqeiDataProcessApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hqei-data-process" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hqei.data.process.HqeiDataProcessApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HqeiDataTaskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hqei-data-task" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hqei.data.task.HqeiDataTaskApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HqeiDbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hqei-db" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hqei.db.HqeiDbApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HqeiServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hqei-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hqei.server.HqeiServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Downloads/play-samples-play-scala-hello-world-tutorial" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89900217-d453-4a2e-bf27-a836d2569f28" name="Default Changelist" comment="" />
+      <created>1562234924360</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562234924360</updated>
+      <workItem from="1562234926124" duration="2773000" />
+      <workItem from="1562315491628" duration="1110000" />
+      <workItem from="1562502663375" duration="599000" />
+      <workItem from="1562511526587" duration="6159000" />
+      <workItem from="1562653933907" duration="2498000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13139000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="60" y="23" width="1380" height="877" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3251121" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32939634" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.31082803" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32939634" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="JProfiler" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.32866243" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Preview" order="9" weight="0.32884902" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysPermissionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysRoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysUserRoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/dao/SysRolePermissionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/SysPermissionDo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/SysRoleDo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/SysRolePermissionDo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/SysUserDo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/domain/SysUserRoleDo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1348">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/resources/generator/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-data-log/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/hqei-data-log/src/main/resources/generator/generatorConfig.xml" />
+    <entry file="file://$PROJECT_DIR$/hqei-common/src/main/java/com/hqei/common/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-common/src/main/java/com/hqei/common/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-common/src/main/java/com/hqei/common/BaseResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-common/src/main/java/com/hqei/common/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-common/src/main/java/com/hqei/common/IdDo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysPermissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysRolePermissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysUserRoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysRoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/user/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-954">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/HqeiServerSwagger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/HqeiServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/UserPermissionInfoVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/SysUserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/SimpleUserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/SimpleRoleVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/user/SysUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/SysUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/HqeiServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/user/SysRoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/user/SysPermissionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/SimplePermissionVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/vo/SimpleMenuVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/controller/SysController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/exception/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/AjaxPermissionsAuthorizationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/system/DefaultView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysPermissionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysRolePermissionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/service/impl/SysRoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hqei-server/src/main/java/com/hqei/server/config/shiro/UserRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>hqei-common</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

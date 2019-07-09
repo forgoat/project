@@ -10,10 +10,8 @@
 
     <modules>
         <module>hqei-common</module>
-        <module>hqei-data-approve</module>
-        <module>hqei-data-import</module>
-        <module>hqei-data-process</module>
         <module>hqei-db</module>
         <module>hqei-server</module>
+        <module>api-generator</module>
     </modules>
 </project>

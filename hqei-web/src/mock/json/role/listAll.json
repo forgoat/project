@@ -1,0 +1,12 @@
+{
+  "code": "0",
+  "msg": "success!",
+  "errorMap": null,
+  "result": [{
+    "id": 1,
+    "roleName": "超级管理员",
+    "createTime": 1560747422000,
+    "updateTime": 1560747422000,
+    "status": 1
+  }]
+}

@@ -1,7 +1,10 @@
 package com.hqei.server.request;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 public class ModifyUserReq {
 
@@ -10,10 +13,18 @@ public class ModifyUserReq {
     private String password;
     @NotBlank
     private String nickname;
-    @NotBlank
-    private Long roleId;
+    @NotEmpty
+    private List<Long> roleIds;
     @NotNull
     private Integer status;
+
+    public List<Long> getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(List<Long> roleIds) {
+        this.roleIds = roleIds;
+    }
 
     public Long getUserId() {
         return userId;
@@ -37,14 +48,6 @@ public class ModifyUserReq {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
-    }
-
-    public Long getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Long roleId) {
-        this.roleId = roleId;
     }
 
     public Integer getStatus() {

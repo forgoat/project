@@ -1,0 +1,13 @@
+{
+  "code": "0",
+  "msg": "success!",
+  "errorMap": null,
+  "result": {
+    "userId": 10000,
+    "nickname": "超级用户",
+    "roleIds": [1],
+    "roleNames": ["超级管理员"],
+    "menuList": ["role", "task", "data", "org", "dept", "user"],
+    "permissionList": ["user:list", "log:list", "role:update", "task:list", "org:update", "role:add", "dept:list", "data:export", "role:list", "dept:delete", "role:delete", "org:audit", "data:audit", "user:add", "user:delete", "task:update", "org:list", "data:list", "user:update", "task:process", "dept:audit", "task:add", "org:process", "dept:process", "dept:update", "task:audit", "org:delete", "data:import"]
+  }
+}

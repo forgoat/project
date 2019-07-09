@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-generator" />
+        <module name="hqei-common" />
+        <module name="hqei-db" />
+        <module name="hqei-project" />
+        <module name="hqei-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-generator" target="1.8" />
+      <module name="hqei-common" target="1.8" />
+      <module name="hqei-data-import-export" target="1.8" />
+      <module name="hqei-data-log" target="1.8" />
+      <module name="hqei-data-process" target="1.8" />
+      <module name="hqei-data-task" target="1.8" />
+      <module name="hqei-db" target="1.8" />
+      <module name="hqei-project" target="1.5" />
+      <module name="hqei-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

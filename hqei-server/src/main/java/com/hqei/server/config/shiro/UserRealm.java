@@ -9,9 +9,11 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
+import org.apache.shiro.codec.Base64;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +50,7 @@ public class UserRealm extends AuthorizingRealm {
 		String loginName = (String) authcToken.getPrincipal();
 		// 获取用户密码
 		String password = new String((char[]) authcToken.getCredentials());
-		SysUserDo sysUserDo = sysUserService.getUser(loginName, password);
+		SysUserDo sysUserDo = sysUserService.getUser(loginName);
 		if (sysUserDo == null) {
 			//没找到帐号
 			throw new UnknownAccountException();
@@ -57,7 +59,7 @@ public class UserRealm extends AuthorizingRealm {
 		SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
                 sysUserDo.getUsername(),
                 sysUserDo.getPassword(),
-				//ByteSource.Util.bytes("salt"), salt=username+salt,采用明文访问时，不需要此句
+				ByteSource.Util.bytes(Base64.decode(sysUserDo.getSalt())), //salt=username+salt,采用明文访问时，不需要此句
 				getName()
 		);
 		//session中不需要保存密码

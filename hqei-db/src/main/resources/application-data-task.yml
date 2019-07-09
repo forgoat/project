@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/hqei-data-task?serverTimezone=UTC
+    username: root
+    password:
+
+liquibase:
+  change-log: classpath:config/liquibase/task/master.xml
+  enabled: true
+  drop-first: false
+
+

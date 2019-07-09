@@ -1,6 +1,7 @@
 package com.hqei.server.domain;
 
 import com.hqei.common.IdDo;
+import org.omg.CORBA.INTERNAL;
 
 public class SysPermissionDo extends IdDo{
 
@@ -8,7 +9,7 @@ public class SysPermissionDo extends IdDo{
     private String menuName;
     private String permissionCode;
     private String permissionName;
-    private Boolean requiredPermission;
+    private Integer requiredPermission;
 
     public String getMenuCode() {
         return menuCode;
@@ -42,11 +43,11 @@ public class SysPermissionDo extends IdDo{
         this.permissionName = permissionName == null ? null : permissionName.trim();
     }
 
-    public Boolean getRequiredPermission() {
+    public Integer getRequiredPermission() {
         return requiredPermission;
     }
 
-    public void setRequiredPermission(Boolean requiredPermission) {
+    public void setRequiredPermission(Integer requiredPermission) {
         this.requiredPermission = requiredPermission;
     }
 }

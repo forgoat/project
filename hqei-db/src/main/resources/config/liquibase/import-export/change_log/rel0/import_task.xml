@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="create.table" author="zhangchen">
+        <createTable tableName="import_task" remarks="导入任务表">
+            <column name="id" type="bigint" autoIncrement="true" startWith="10000">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="data_type" type="int"/>
+            <column name="file_name" type="varchar(128)"/>
+            <column name="upload_user" type="varchar(128)"/>
+            <column name="import_time" type="bigint" />
+            <column name="import_user" type="varchar(256)"/>
+            <column name="total" type="int"/>
+            <column name="success" type="int" />
+            <column name="failure" type="int" />
+            <column name="repeat" type="int" />
+            <column name="status" type="int" />
+        </createTable>
+    </changeSet>
+    <changeSet id="addColumnDownloadErrorsUrl" author="zhangchen">
+        <addColumn tableName="import_task">
+            <column name="download_errors_url" type="varchar(256)"></column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

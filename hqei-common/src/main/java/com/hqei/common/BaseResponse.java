@@ -1,10 +1,13 @@
 package com.hqei.common;
 
 import com.hqei.common.enums.BaseCodeEnum;
+import com.hqei.common.util.json.JsonUtil;
 import com.hqei.common.util.reflect.ReflectionUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.beans.Transient;
 import java.io.Serializable;
 import java.util.Map;
 
@@ -90,13 +93,18 @@ public class BaseResponse<T> implements Serializable{
         this.errorMap = errorMap;
     }
 
-//    @Override
-//    public String toString() {
-//        String json;
-//        if(null != result && !(result instanceof String)){
-//            return new BaseResponse<String>(code, msg, JsonUtil.getDefault().toJson(result)).toString();
-//        }
-//        json = JsonUtil.getDefault().toJson(this);
-//        return StringUtils.isBlank(json) ? BaseResponse.ERROR : json;
-//    }
+    @Transient
+    public boolean isSuccess(){
+        return null == this? false : this.getCode().equals(BaseCodeEnum.SUCCESS.getCode());
+    }
+
+    @Override
+    public String toString() {
+        String json;
+        if(null != result && !(result instanceof String)){
+            return new BaseResponse<String>(code, msg, JsonUtil.getDefault().toJson(result)).toString();
+        }
+        json = JsonUtil.getDefault().toJson(this);
+        return StringUtils.isBlank(json) ? BaseResponse.ERROR.toString() : json;
+    }
 }

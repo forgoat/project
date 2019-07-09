@@ -7,19 +7,23 @@
     <result column="menu_name" property="menuName" jdbcType="VARCHAR" />
     <result column="permission_code" property="permissionCode" jdbcType="VARCHAR" />
     <result column="permission_name" property="permissionName" jdbcType="VARCHAR" />
-    <result column="required_permission" property="requiredPermission" jdbcType="BIT" />
+    <result column="required_permission" property="requiredPermission" jdbcType="INTEGER" />
   </resultMap>
 
   <resultMap id="permissionMap" type="com.hqei.server.vo.UserPermissionInfoVo">
     <id column="userId" property="userId"/>
     <result column="nickname" property="nickname"/>
-    <result column="roleId" property="roleId"/>
-    <result column="roleName" property="roleName"/>
+    <collection property="roleIds" ofType="Long">
+      <id column="roleId"/>
+    </collection>
+    <collection property="roleNames" ofType="String">
+      <id column="roleName"/>
+    </collection>
     <collection property="menuList" ofType="String">
-      <id column="menuCode" property="menuCode"/>
+      <id column="menuCode"/>
     </collection>
     <collection property="permissionList" ofType="String">
-      <id column="permissionCode" property="permissionCode"/>
+      <id column="permissionCode"/>
     </collection>
   </resultMap>
 
@@ -41,7 +45,7 @@
       permission_code, permission_name, required_permission
       )
     values (#{id,jdbcType=BIGINT}, #{menuCode,jdbcType=VARCHAR}, #{menuName,jdbcType=VARCHAR}, 
-      #{permissionCode,jdbcType=VARCHAR}, #{permissionName,jdbcType=VARCHAR}, #{requiredPermission,jdbcType=BIT}
+      #{permissionCode,jdbcType=VARCHAR}, #{permissionName,jdbcType=VARCHAR}, #{requiredPermission,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.hqei.server.domain.SysPermissionDo" >
@@ -83,7 +87,7 @@
         #{permissionName,jdbcType=VARCHAR},
       </if>
       <if test="requiredPermission != null" >
-        #{requiredPermission,jdbcType=BIT},
+        #{requiredPermission,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -103,7 +107,7 @@
         permission_name = #{permissionName,jdbcType=VARCHAR},
       </if>
       <if test="requiredPermission != null" >
-        required_permission = #{requiredPermission,jdbcType=BIT},
+        required_permission = #{requiredPermission,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -114,7 +118,7 @@
       menu_name = #{menuName,jdbcType=VARCHAR},
       permission_code = #{permissionCode,jdbcType=VARCHAR},
       permission_name = #{permissionName,jdbcType=VARCHAR},
-      required_permission = #{requiredPermission,jdbcType=BIT}
+      required_permission = #{requiredPermission,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
 
@@ -122,16 +126,17 @@
     SELECT
     u.id              userId,
     u.nickname        nickname,
-    u.role_id         roleId,
+    ur.role_id         roleId,
     r.role_name       roleName,
     p.menu_code       menuCode,
     p.permission_code permissionCode
     FROM sys_user u
-    LEFT JOIN sys_role r ON r.id = u.role_id
-    LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id
-    LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1'
+    LEFT JOIN sys_user_role ur ON u.id = ur.user_id
+    LEFT JOIN sys_role r ON r.id = ur.role_id
+    LEFT JOIN sys_role_permission rp ON ur.role_id = rp.role_id
+    LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.status = '1'
     WHERE u.username = #{username}
-    AND u.delete_status = '1'
+    AND u.status = '1' AND r.id =  #{roleId}
   </select>
   <select id="getAllPermission" resultType="String">
     SELECT p.permission_code permissionCode
@@ -142,5 +147,23 @@
     SELECT p.menu_code menuCode
     FROM sys_permission p
     ORDER BY p.id
+  </select>
+
+  <resultMap id="listAllPermissionMap" type="com.hqei.server.vo.SysPermissionVo">
+    <id column="menuName" property="menuName"/>
+    <collection property="permissions" ofType="com.hqei.server.domain.SysPermissionDo">
+      <id column="id" property="id"/>
+      <result column="permissionName" property="permissionName"/>
+      <result column="requiredPerm" property="requiredPermission" javaType="Integer"/>
+    </collection>
+  </resultMap>
+
+  <select id="listAllPermission" resultMap="listAllPermissionMap">
+    SELECT
+    p.id                  id,
+    p.menu_name           menuName,
+    p.permission_name     permissionName,
+    p.required_permission requiredPerm
+    FROM sys_permission p;
   </select>
 </mapper>
